@@ -38,7 +38,9 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  border: none;
+  color: #535261;
+  font-size: 18px;
+  border: 2px solid #dcdcde;
   border-radius: 4%;
   padding: 12px;
 `;
@@ -48,7 +50,7 @@ const MainButton = styled.div`
   display: flex;
   /* align-items: center; */
   /* justify-content: ; */
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
 
   & :hover {
@@ -78,7 +80,7 @@ const ImageRight = styled.img`
   background-size: cover;
 `;
 
-export const GivePassAgain = () => {
+export const GivePassAgainNew = () => {
   return (
     <div>
       <Container>
@@ -93,29 +95,18 @@ export const GivePassAgain = () => {
                   fontSize: "1.5rem",
                 }}
               >
-                Đặt lại mật khẩu
+                Đặt lại mật khẩu mới
               </Label>
-              <Label>Vui lòng nhập email để đặt lại mật khẩu của bạn *</Label>
-              <Input placeholder="Vui lòng nhập lại Email!" type={"text"} />
+              <Label>Mật khẩu</Label>
+              <Input type={"password"} />
+              <Label>Nhập lại mật khẩu</Label>
+              <Input type={"password"} />
               <MainButton>
-                <Link to={"/login"}>
-                  <Button
-                    style={{
-                      color: "#dc7106",
-                      border: "2px solid #ff9641",
-                      background: "#f6f6f6",
-                    }}
-                  >
-                    Hủy
-                  </Button>
-                </Link>
-                <Link to={"/dat-lai-mat-khau"}>
-                  <Button
-                    style={{ color: "#fff9f4", backgroundColor: "#ff9138" }}
-                  >
-                    Tiếp tục
-                  </Button>
-                </Link>
+                <Button
+                  style={{ color: "#fff9f4", backgroundColor: "#ff9138" }}
+                >
+                  Xác nhận
+                </Button>
               </MainButton>
             </Form>
           </Wrapper>

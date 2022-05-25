@@ -94,13 +94,15 @@ const Button = styled.button`
   font-size: 20px;
   width: 10rem;
   height: 2rem;
-  background-color: #fa7900;
-  color: white;
+  color: #fff9f4;
+  background-color: #ff9138;
   border: 1px solid #fa7900;
   border-radius: 10%;
 `;
 
-const Links = styled.a`
+const Links = styled.button`
+  background-color: #f6f6f6;
+  border: none;
   margin-top: 10px;
   color: red;
   font-size: 20px;
@@ -165,8 +167,9 @@ export const Login = () => {
 
               <MainButton>
                 <Button>Đăng Nhập</Button>
-                {/* <Links>Quên mật khẩu?</Links> */}
-                <Links href="/quen-mat-khau">Quên mật khẩu?</Links>
+                <Link to={"/quen-mat-khau"}>
+                  <Links>Quên mật khẩu?</Links>
+                </Link>
               </MainButton>
             </Form>
           </Wrapper>
