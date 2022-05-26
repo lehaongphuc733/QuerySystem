@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import { GivePassAgain } from "./components/GivePassAgain";
 import { Login } from "./components/Login";
 import { GivePassAgainNew } from "./components/GivePassAgainNew";
+import { MyDashboard } from "./components/Dashboard/MyDashboard";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -16,6 +17,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/dang-nhap" element={<MyDashboard />} />
         <Route path="/quen-mat-khau" element={<GivePassAgain />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dat-lai-mat-khau" element={<GivePassAgainNew />} />

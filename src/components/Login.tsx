@@ -68,6 +68,7 @@ const PassContainer = styled.div`
 
 const Notification = styled.div`
   display: flex;
+  visibility: hidden;
 `;
 
 const LabelNotification = styled.label`
@@ -154,7 +155,7 @@ export const Login = () => {
                   />
                 </ObVisibilityOff>
               </PassContainer>
-              {/* <Notification>
+              <Notification>
                 <ErrorOutline
                   style={{
                     color: "red",
@@ -163,10 +164,12 @@ export const Login = () => {
                 <LabelNotification>
                   Sai tên đăng nhập hoặc mật khẩu
                 </LabelNotification>
-              </Notification> */}
+              </Notification>
 
               <MainButton>
-                <Button>Đăng Nhập</Button>
+                <Link to={"/dang-nhap"}>
+                  <Button>Đăng Nhập</Button>
+                </Link>
                 <Link to={"/quen-mat-khau"}>
                   <Links>Quên mật khẩu?</Links>
                 </Link>

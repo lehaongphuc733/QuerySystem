@@ -98,7 +98,7 @@ export const GivePassAgain = () => {
               <Label>Vui lòng nhập email để đặt lại mật khẩu của bạn *</Label>
               <Input placeholder="Vui lòng nhập lại Email!" type={"text"} />
               <MainButton>
-                <Link to={"/login"}>
+                <Link to={"/"}>
                   <Button
                     style={{
                       color: "#dc7106",
