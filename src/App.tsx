@@ -4,7 +4,7 @@ import { Login } from "./components/Login";
 function App() {
   return (
     <div className="App">
-      <Login />
+      <Login name="lequynhaivan001" password="12345678" />
     </div>
   );
 }

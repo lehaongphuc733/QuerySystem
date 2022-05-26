@@ -19,7 +19,10 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/dang-nhap" element={<MyDashboard />} />
         <Route path="/quen-mat-khau" element={<GivePassAgain />} />
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={<Login name="lequynhaivan01" password="12345678" />}
+        />
         <Route path="/dat-lai-mat-khau" element={<GivePassAgainNew />} />
       </Routes>
     </BrowserRouter>

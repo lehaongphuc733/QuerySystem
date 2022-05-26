@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import logo from "../../components/assert/logo_login.jpg";
+import logo from "../../components/assert/logo_trangchu.jpg";
 import { Link } from "react-router-dom";
 import {
   Dashboard,
@@ -7,6 +7,7 @@ import {
   QuestionAnswer,
   ViewStream,
   Assessment,
+  ExitToApp,
 } from "@material-ui/icons";
 
 const Container = styled.div`
@@ -20,7 +21,11 @@ const NavLeft = styled.div`
   text-align: center;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  margin-top: 5rem;
+  height: 15rem;
+  width: 15rem;
+`;
 
 const Wrapper = styled.div`
   margin-top: 5rem;
@@ -171,6 +176,19 @@ export const MyDashboard = () => {
               </Link>
             </DropdownContent>
           </Dropdown>
+          <Button
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: "30%",
+              backgroundColor: "#fff2e7",
+              padding: "20px",
+              color: "#ff9946",
+            }}
+          >
+            <ExitToApp />
+            Đăng xuất
+          </Button>
         </Wrapper>
       </NavLeft>
       <NavRight>

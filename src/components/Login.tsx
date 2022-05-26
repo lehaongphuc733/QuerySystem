@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 import logoLogin from "../../src/components/assert/logo_login.jpg";
 import imageRight from "../../src/components/assert/image_right.jpg";
 
+type User = {
+  name: string;
+  password: string;
+};
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -127,7 +132,7 @@ const ImageRight = styled.img`
   background-size: cover;
 `;
 
-export const Login = () => {
+export const Login = (props: User) => {
   return (
     <div>
       <Container>
@@ -136,13 +141,14 @@ export const Login = () => {
             <Image src={logoLogin} />
             <Form>
               <Label htmlFor="">Tên đăng nhập *</Label>
-              <Input placeholder="username" required />
+              <Input placeholder="username" required value={props.name} />
               <Label htmlFor="">Mật khẩu *</Label>
               <PassContainer>
                 <Input
                   style={{ width: "17.5rem" }}
                   placeholder="password"
                   type={"password"}
+                  value={props.password}
                   required
                 />
                 <ObVisibilityOff>
