@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { VisibilityOff, ErrorOutline } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import logoLogin from "../../src/components/assert/logo_login.jpg";
@@ -133,6 +133,14 @@ const ImageRight = styled.img`
 `;
 
 export const Login = (props: User) => {
+  const HandleEye = () => {
+    // var x = document.getElementById("myInput");
+    // if (x.type === "password") {
+    //   x.type = "text";
+    // } else {
+    //   x.type = "password";
+    // }
+  };
   return (
     <div>
       <Container>
@@ -145,12 +153,14 @@ export const Login = (props: User) => {
               <Label htmlFor="">Mật khẩu *</Label>
               <PassContainer>
                 <Input
+                  id="myInput"
                   style={{ width: "17.5rem" }}
                   placeholder="password"
                   type={"password"}
                   value={props.password}
                   required
                 />
+                {/* <Button onClick={HandleEye}>Show</Button> */}
                 <ObVisibilityOff>
                   <VisibilityOff
                     style={{

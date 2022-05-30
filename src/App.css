@@ -40,3 +40,32 @@
 .link {
   color: red;
 }
+
+#dropdown-item:hover {
+  background: #fff2e7;
+  color: #ff9138;
+}
+
+#a1 {
+  color: #7e7d88;
+  text-decoration: none;
+  display: flex;
+}
+
+#a1:hover {
+  background-color: #fff2e7;
+  color: #ff9138;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#a1:hover .item {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  display: block;
+}
+
+#nav-link-left:hover {
+  background: #fff2e7;
+  color: #ff9138;
+}
