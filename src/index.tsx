@@ -7,7 +7,8 @@ import reportWebVitals from "./reportWebVitals";
 import { GivePassAgain } from "./components/GivePassAgain";
 import { Login } from "./components/Login";
 import { GivePassAgainNew } from "./components/GivePassAgainNew";
-import { MyDashboard } from "./components/Dashboard/MyDashboard";
+import { Dashboard } from "./components/Dashboard/Dashboard";
+import { PageInf } from "./components/Dashboard/PageInf";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,7 +19,9 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/dang-nhap" element={<MyDashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/info" element={<PageInf />} />
+        {/* <Route path="/dang-nhap" element={<MyDashboard />} /> */}
         <Route path="/quen-mat-khau" element={<GivePassAgain />} />
         <Route
           path="/login"
@@ -29,8 +32,4 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

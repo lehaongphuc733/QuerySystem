@@ -41,6 +41,129 @@
   color: red;
 }
 
+.noti {
+  display: flex;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: 260px;
+  top: 28px;
+  background: #fff2e7;
+  border-radius: 32px;
+  color: #ffac6a;
+  cursor: pointer;
+}
+
+.noti:active {
+  display: flex;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: 260px;
+  top: 28px;
+  background: #ff7506;
+  border-radius: 32px;
+  color: #fff;
+}
+
+.option {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  width: 200px;
+  height: 48px;
+  margin-bottom: 6px;
+  text-align: left;
+  display: flex;
+}
+.option .nlink-left-dashboard {
+  text-decoration: none;
+  width: 200px;
+  height: 48px;
+  display: flex;
+  color: #9a9aa2;
+}
+
+.option .nlink-left-dashboard:hover {
+  background: #fff2e7;
+  color: #ff8422;
+}
+
+.option:last-child {
+  width: 200px;
+  height: 48px;
+  float: left;
+  overflow: hidden;
+}
+
+.option .nlink-left-dashboard:hover .dropdown {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  display: block;
+}
+
+.option:last-child .nlink-left-dashboard {
+  width: 200px;
+  height: 48px;
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown {
+  margin-left: 200px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown a {
+  color: #7e7d88;
+  text-decoration: none;
+  display: flex;
+}
+
+.dropdown a:hover {
+  background-color: #fff2e7;
+  color: #ff9138;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.logout a {
+  color: #ff9138;
+  margin: auto;
+  width: 76px;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  text-decoration: none;
+}
+
+.logout .icon {
+  flex: 1;
+  margin: auto;
+}
+
+/* .dropdown a:hover {
+  background-color: #fff2e7;
+  color: #ff9138;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
 #dropdown-item:hover {
   background: #fff2e7;
   color: #ff9138;
@@ -68,4 +191,4 @@
 #nav-link-left:hover {
   background: #fff2e7;
   color: #ff9138;
-}
+} */

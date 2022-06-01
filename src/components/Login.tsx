@@ -183,7 +183,7 @@ export const Login = (props: User) => {
               </Notification>
 
               <MainButton>
-                <Link to={"/dang-nhap"}>
+                <Link to={"/dashboard"}>
                   <Button>Đăng Nhập</Button>
                 </Link>
                 <Link to={"/quen-mat-khau"}>
