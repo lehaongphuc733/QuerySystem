@@ -1,9 +1,6 @@
 import styled from "styled-components";
-import { Estimate } from "./Estimate";
-import { Navbar } from "./Navbar";
-import { TableStatistical } from "./TableStatistical";
-import { VerticalNavLeft } from "./VerticalNavLeft";
-import { VerticalNavRight } from "./VerticalNavRight";
+import { VerticalNavLeft } from "../Dashboard/VerticalNavLeft";
+import { Navbar } from "./../Dashboard/Navbar";
 
 const Page = styled.div`
   height: 900px;
@@ -23,7 +20,7 @@ const Wrapper = styled.div`
 
 const Label = styled.label`
   position: absolute;
-  width: 182px;
+  width: 210px;
   height: 36px;
   left: 224px;
   top: 104px;
@@ -34,16 +31,13 @@ const Label = styled.label`
   color: #ff7506;
 `;
 
-export const Dashboard = () => {
+export const Device = () => {
   return (
     <Page>
       <Wrapper>
-        <Label>Biểu đồ cấp số</Label>
-        <Estimate />
-        <TableStatistical />
+        <Label>Danh sách thiết bị</Label>
         <VerticalNavLeft />
-        <VerticalNavRight />
-        <Navbar content="Dashboard" />
+        <Navbar content="Thiết bị" />
       </Wrapper>
     </Page>
   );

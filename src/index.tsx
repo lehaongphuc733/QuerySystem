@@ -9,6 +9,7 @@ import { Login } from "./components/Login";
 import { GivePassAgainNew } from "./components/GivePassAgainNew";
 import { Dashboard } from "./components/Dashboard/Dashboard";
 import { PageInf } from "./components/Dashboard/PageInf";
+import { Device } from "./components/Device/Device";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -21,7 +22,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/info" element={<PageInf />} />
-        {/* <Route path="/dang-nhap" element={<MyDashboard />} /> */}
+        <Route path="/device" element={<Device />} />
         <Route path="/quen-mat-khau" element={<GivePassAgain />} />
         <Route
           path="/login"

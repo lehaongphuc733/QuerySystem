@@ -157,38 +157,67 @@
   margin: auto;
 }
 
-/* .dropdown a:hover {
-  background-color: #fff2e7;
-  color: #ff9138;
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
+/* Dashboard - navright*/
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #282c34 !important;
+  font-weight: 700;
 }
 
-#dropdown-item:hover {
-  background: #fff2e7;
-  color: #ff9138;
+.db-content1 .number {
+  position: absolute;
+  top: -30px;
+  left: 3px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 36px;
+  color: #535261;
 }
 
-#a1 {
-  color: #7e7d88;
-  text-decoration: none;
+.db-content1 .name {
+  position: absolute;
+  width: 49px;
+  height: 21px;
+  left: 25px;
+  top: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.db-content1 .device {
+  color: #ffcea7;
+}
+
+.db-content1 .service {
+  color: #7fa2ff;
+}
+
+.db-content1 .numberof {
+  color: #61d37e;
+}
+
+.db-content1 .db-icon-navright {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 26.5px;
   display: flex;
 }
 
-#a1:hover {
-  background-color: #fff2e7;
-  color: #ff9138;
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
+.db-content1 .db-icon-navright .icon-navR {
+  margin: auto;
+  /* color: #ff7506; */
 }
 
-#a1:hover .item {
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
-  display: block;
+.db-content1 .db-icon-navright .ic_com {
+  color: #ffcea7;
 }
-
-#nav-link-left:hover {
-  background: #fff2e7;
-  color: #ff9138;
-} */
+.db-content1 .db-icon-navright .ic_dv {
+  color: #7fa2ff;
+}
+.db-content1 .db-icon-navright .ic_number {
+  color: #61d37e;
+}

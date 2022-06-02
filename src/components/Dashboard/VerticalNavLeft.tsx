@@ -95,7 +95,7 @@ export const VerticalNavLeft = () => {
           </Link>
         </Option>
         <Option className="option">
-          <Link className="nlink-left-dashboard" to={"/dashboard"}>
+          <Link className="nlink-left-dashboard" to={"/device"}>
             <Tv style={{ color: "#b4b4bb", flex: "1", margin: "auto" }} />
             <P style={{ flex: "3", margin: "auto" }}>Thiết bị</P>
           </Link>
