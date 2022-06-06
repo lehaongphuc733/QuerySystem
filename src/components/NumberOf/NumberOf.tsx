@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { VerticalNavLeft } from "../Dashboard/VerticalNavLeft";
 import { Navbar } from "./../Dashboard/Navbar";
-import { StatiscalDevice } from "./StatiscalDevice";
 
 const Page = styled.div`
   height: 900px;
@@ -32,14 +31,13 @@ const Label = styled.label`
   color: #ff7506;
 `;
 
-export const Device = () => {
+export const NumberOf = () => {
   return (
     <Page>
       <Wrapper>
-        <Label>Danh sách thiết bị</Label>
+        <Label>Quản lý cấp số</Label>
         <VerticalNavLeft />
-        <StatiscalDevice />
-        <Navbar content="Thiết bị" />
+        <Navbar content="Cấp số" />
       </Wrapper>
     </Page>
   );

@@ -101,7 +101,7 @@ export const VerticalNavLeft = () => {
           </Link>
         </Option>
         <Option className="option">
-          <Link className="nlink-left-dashboard" to={"/dashboard"}>
+          <Link className="nlink-left-dashboard" to={"/services"}>
             <QuestionAnswer
               style={{ color: "#b4b4bb", flex: "1", margin: "auto" }}
             />
@@ -109,7 +109,7 @@ export const VerticalNavLeft = () => {
           </Link>
         </Option>
         <Option className="option">
-          <Link className="nlink-left-dashboard" to={"/dashboard"}>
+          <Link className="nlink-left-dashboard" to={"/numberof"}>
             <ViewStream
               style={{ color: "#b4b4bb", flex: "1", margin: "auto" }}
             />

@@ -221,3 +221,118 @@
 .db-content1 .db-icon-navright .ic_number {
   color: #61d37e;
 }
+
+.status-start {
+  position: absolute;
+  width: 87px;
+  height: 21px;
+  left: 0px;
+  top: 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  color: #7e7d88;
+}
+
+.status-start-estimate {
+  position: absolute;
+  width: 38px;
+  height: 18px;
+  left: 99px;
+  top: 1px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ff7506;
+}
+
+.status-stop {
+  position: absolute;
+  width: 125px;
+  height: 21px;
+  left: 0px;
+  top: 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  color: #7e7d88;
+}
+
+.status-estimate-stop {
+  position: absolute;
+  width: 38px;
+  height: 18px;
+  left: 99px;
+  top: 1px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ff7506;
+}
+
+.status-skip {
+  position: absolute;
+  width: 87px;
+  height: 21px;
+  left: 0px;
+  top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  color: #7e7d88;
+}
+
+.status-estimate-skip {
+  position: absolute;
+  width: 38px;
+  height: 18px;
+  left: 99px;
+  top: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+}
+/* /////////////////////////////////////////// */
+
+/* Dashboard - Estimate */
+.db-nl-title {
+  text-decoration: none;
+}
+
+.db-nl-title .db-title-icon {
+  margin: auto;
+}
+
+.calendar-success {
+  color: #35c75a;
+}
+
+.phone-contact {
+  color: #ffac6a;
+}
+
+.book {
+  color: #f86d6d;
+}
+
+.db-tt-icon {
+  width: 10px;
+  height: 10px;
+  margin: auto;
+}
+
+.db-fAdd {
+  text-decoration: none;
+}
+
+.db-fAdd:hover {
+  cursor: pointer;
+}
+
+/* /////////////////////////////////////////// */

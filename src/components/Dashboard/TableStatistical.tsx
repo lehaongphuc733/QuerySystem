@@ -1,5 +1,8 @@
 import styled from "styled-components";
-
+import React, { useEffect, useState } from "react";
+import { Bar, Line, Doughnut } from "react-chartjs-2";
+import { Label } from "@material-ui/icons";
+// import thu vien r
 const Container = styled.div`
   position: absolute;
   width: 791px;
@@ -14,9 +17,39 @@ const Container = styled.div`
 const Wrapper = styled.div``;
 
 export const TableStatistical = () => {
+  const [chartData, setChartData] = useState({});
+
+  const chart = () => {
+    setChartData({
+      labels: ["monday", "tueday", "wednesday", "thursday", "friday"],
+      datasets: [
+        {
+          label: "level of thiccness",
+          date: [32, 45, , 12, 76, , 69],
+          backgroundColor: ["rgba(75, 192, 192, 0.6)"],
+          borderWidth: 4,
+        },
+      ],
+    });
+  };
+
+  useEffect(() => {
+    chart();
+  }, []);
+
   return (
     <Container>
-      <Wrapper></Wrapper>
+      <Wrapper>
+        {/* <Doughnut data={chartData} /> */}
+        {/* <Bar
+          data={data}
+          height={400}
+          width={600}
+          options={{
+            maintainAspectRatio: false,
+          }}
+        /> */}
+      </Wrapper>
     </Container>
   );
 };

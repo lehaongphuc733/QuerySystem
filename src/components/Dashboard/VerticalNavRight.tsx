@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Computer, QuestionAnswer, ViewStream } from "@material-ui/icons";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { Calendar } from "./Calendar";
 
 // const percentage = 90;
 
@@ -93,6 +94,106 @@ const Content1 = styled.div`
   top: 14px;
 `;
 
+const Status = styled.div`
+  position: absolute;
+  width: 145px;
+  height: 47px;
+  left: 192px;
+  top: 1px;
+`;
+
+const SStart = styled.div``;
+
+const BlockLbStop = styled.div`
+  position: absolute;
+  width: 145px;
+  height: 21px;
+  left: 8px;
+  top: 26px;
+`;
+
+const BlockLbSkip = styled.div`
+  position: absolute;
+  width: 137px;
+  height: 21px;
+  left: 8px;
+  top: 42px;
+`;
+
+const SStop = styled.div``;
+
+const SSkip = styled.div``;
+
+const LabDevice = styled.p`
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 4px;
+  height: 4px;
+  background: #ffd130;
+  border-radius: 4px;
+`;
+
+const LabStop = styled.p`
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  left: 0px;
+  top: 30px;
+  background: #7e7d88;
+  border-radius: 4px;
+`;
+
+const LabServiceStop = styled.div``;
+
+const LabService = styled.p`
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  width: 4px;
+  height: 4px;
+  background: #ffd130;
+  border-radius: 4px;
+`;
+
+const LabNumber = styled.p`
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  width: 4px;
+  height: 4px;
+  background: #ffd130;
+  border-radius: 4px;
+`;
+
+const LabNumberStop = styled.div`
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  left: 0px;
+  top: 47px;
+  background: #7e7d88;
+  border-radius: 4px;
+`;
+
+const LabNumberSkip = styled.div`
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  left: 0px;
+  top: 72px;
+  background: #f178b6;
+  border-radius: 4px;
+`;
+
+const BlockLb = styled.div`
+  position: absolute;
+  width: 137px;
+  height: 21px;
+  left: 8px;
+  top: -3px;
+`;
+
 const CircleOut = styled.div``;
 
 const CircleIn = styled.div`
@@ -112,7 +213,7 @@ export const VerticalNavRight = () => {
     <Container>
       <Span>Tổng quan</Span>
       <Devices>
-        <Link to={"#"} style={{ textDecoration: "none" }}>
+        <Link to={"/device"} style={{ textDecoration: "none" }}>
           <EqualOrange>
             <CircleOut>
               <CircularProgressbar
@@ -137,7 +238,6 @@ export const VerticalNavRight = () => {
             <CircleIn>
               <CircularProgressbar
                 value={10}
-                // text={`${1}%`}
                 strokeWidth={5}
                 styles={{
                   root: {},
@@ -161,10 +261,26 @@ export const VerticalNavRight = () => {
             </Icon>
             <P className="name device">Thiết bị</P>
           </Content1>
+          <Status>
+            <SStart>
+              <LabDevice></LabDevice>
+              <BlockLb>
+                <P className="status-start">Đang hoạt động</P>
+                <P className="status-start-estimate">3.799</P>
+              </BlockLb>
+            </SStart>
+            <SStop>
+              <LabStop></LabStop>
+              <BlockLbStop>
+                <P className="status-stop">Ngưng hoạt động</P>
+                <P className="status-estimate-stop">422</P>
+              </BlockLbStop>
+            </SStop>
+          </Status>
         </Link>
       </Devices>
       <Services>
-        <Link to={"#"}>
+        <Link to={"/services"}>
           <EqualOrange>
             <CircleOut>
               <CircularProgressbar
@@ -189,7 +305,6 @@ export const VerticalNavRight = () => {
             <CircleIn>
               <CircularProgressbar
                 value={24}
-                // text={`${10}%`}
                 strokeWidth={5}
                 styles={{
                   root: {},
@@ -213,10 +328,36 @@ export const VerticalNavRight = () => {
             </Icon>
             <P className="name service">Dịch vụ</P>
           </Content1>
+          <Status>
+            <SStart>
+              <LabService style={{ background: "#4277FF" }}></LabService>
+              <BlockLb>
+                <P className="status-start">Đang hoạt động</P>
+                <P
+                  className="status-start-estimate"
+                  style={{ color: "#4277FF" }}
+                >
+                  210
+                </P>
+              </BlockLb>
+            </SStart>
+            <SStop>
+              <LabStop></LabStop>
+              <BlockLbStop>
+                <P className="status-stop">Ngưng hoạt động</P>
+                <P
+                  className="status-estimate-stop"
+                  style={{ color: "#4277FF" }}
+                >
+                  66
+                </P>
+              </BlockLbStop>
+            </SStop>
+          </Status>
         </Link>
       </Services>
       <NumberOf>
-        <Link to={"#"}>
+        <Link to={"/numberof"}>
           <EqualOrange>
             <CircleOut>
               <CircularProgressbar
@@ -241,7 +382,6 @@ export const VerticalNavRight = () => {
             <CircleIn>
               <CircularProgressbar
                 value={17}
-                // text={`${10}%`}
                 strokeWidth={5}
                 styles={{
                   root: {},
@@ -265,9 +405,49 @@ export const VerticalNavRight = () => {
             </Icon>
             <P className="name numberof">Cấp số</P>
           </Content1>
+          <Status>
+            <SStart>
+              <LabNumber style={{ background: "#61d37e" }}></LabNumber>
+              <BlockLb>
+                <P className="status-start">Đã sử dụng</P>
+                <P
+                  className="status-start-estimate"
+                  style={{ color: "#61d37e" }}
+                >
+                  3.721
+                </P>
+              </BlockLb>
+            </SStart>
+            <SStop>
+              <LabNumberStop></LabNumberStop>
+              <BlockLbStop>
+                <P className="status-stop">Đang chờ</P>
+                <P
+                  className="status-estimate-stop"
+                  style={{ color: "#61d37e" }}
+                >
+                  486
+                </P>
+              </BlockLbStop>
+            </SStop>
+            <SSkip>
+              <LabNumberSkip></LabNumberSkip>
+              <BlockLbSkip>
+                <P className="status-skip">Bỏ qua</P>
+                <P
+                  className="status-estimate-skip"
+                  style={{ color: "#61d37e" }}
+                >
+                  32
+                </P>
+              </BlockLbSkip>
+            </SSkip>
+          </Status>
         </Link>
       </NumberOf>
-      <FormCalendar></FormCalendar>
+      <FormCalendar>
+        <Calendar />
+      </FormCalendar>
     </Container>
   );
 };
