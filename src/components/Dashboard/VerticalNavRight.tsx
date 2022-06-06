@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Computer, QuestionAnswer, ViewStream } from "@material-ui/icons";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { Calendar } from "./Calendar";
+import { Calendars } from "./Calendars";
 
 // const percentage = 90;
 
@@ -446,7 +446,7 @@ export const VerticalNavRight = () => {
         </Link>
       </NumberOf>
       <FormCalendar>
-        <Calendar />
+        <Calendars />
       </FormCalendar>
     </Container>
   );
