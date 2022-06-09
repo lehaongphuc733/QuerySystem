@@ -465,3 +465,143 @@
 }
 
 /* /////////////////////////////////////////// */
+
+/* Device - Table */
+
+/* select -dv */
+
+.dv-form-sl {
+  position: relative;
+  display: flex;
+  color: #5d5d6a !important;
+  width: 250px;
+  line-height: 3;
+  background-color: white;
+  /* overflow: hidden; */
+  border-radius: 12px;
+}
+
+.dv-select {
+  width: 250px;
+  padding: 10px;
+
+  /* border-radius: 8px; */
+  /* border: 0.2px solid #eaeaeb; */
+  border: 0.2px solid #e4e4e6;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: none;
+
+  font-size: 20px;
+
+  /* delete arrow (default)*/
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.dv-select::-ms-expand {
+  display: none;
+}
+
+.dv-select:active {
+  border: none;
+  overflow: hidden;
+  /* transform: scaleX(3); */
+  /* background-color: red; */
+}
+
+.dv-select option:hover {
+  cursor: pointer;
+  background-color: #fff2e7 !important;
+}
+
+/* Phia sau  */
+/* .dv-form-sl:after {
+  content: "\25BC";
+  color: #ff7506;
+  border: none;
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+} */
+
+/* .dv-form-sl:hover::after {
+} */
+
+/* .dv-select:focus,
+.dv-select:hover {
+  outline: none;
+  border: 0.2px solid #a6a6b2;
+} */
+
+/* .dv-select .dv-option:hover {
+  background-color: #fff2e7;
+} */
+
+/* .dropdowns:hover .dropdown-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-list {
+  border-radius: 4px;
+  background-color: white;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+.dropdown-list__item {
+  padding: 1rem;
+  font-size: 20px;
+} */
+
+.dv-tag .dv-tag-con a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dv-table td,
+.dv-table th {
+  border: 1px solid #fff4eb;
+  padding: 8px;
+}
+
+.dv-table tr {
+  background-color: #fff2e7;
+}
+
+.dv-table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.dv-table tr:hover {
+  background-color: #ddd;
+}
+
+.dv-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ff9138;
+  color: white;
+}
+
+#row-6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.dv-table tr a {
+  color: #81a4ff;
+}
+
+/* ///////////////////////////////////////////// */

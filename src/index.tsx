@@ -12,6 +12,7 @@ import { PageInf } from "./components/Dashboard/PageInf";
 import { Device } from "./components/Device/Device";
 import { Services } from "./components/Service/Services";
 import { NumberOf } from "./components/NumberOf/NumberOf";
+import { AddDevice } from "./components/Device/AddDevice";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -25,6 +26,7 @@ root.render(
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/info" element={<PageInf />} />
         <Route path="/device" element={<Device />} />
+        <Route path="/add-device" element={<AddDevice />} />
         <Route path="/services" element={<Services />} />
         <Route path="/numberof" element={<NumberOf />} />
         <Route path="/quen-mat-khau" element={<GivePassAgain />} />
