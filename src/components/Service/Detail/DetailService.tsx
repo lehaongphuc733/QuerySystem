@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { VerticalNavLeft } from "../Dashboard/VerticalNavLeft";
-import { Navbar } from "./../Dashboard/Navbar";
-import { StatiscalService } from "./StatiscalService";
+import { Link } from "react-router-dom";
+import { VerticalNavLeft } from "./../../Dashboard/VerticalNavLeft";
+import { Navbar } from "./../../Dashboard/Navbar";
+import { DService } from "./DService";
 
 const Page = styled.div`
   height: 900px;
@@ -32,14 +33,14 @@ const Label = styled.label`
   color: #ff7506;
 `;
 
-export const Services = () => {
+export const DetailService = () => {
   return (
     <Page>
       <Wrapper>
         <Label>Quản lý dịch vụ</Label>
         <VerticalNavLeft />
-        <StatiscalService />
-        <Navbar content="Dịch vụ" />
+        <DService />
+        <Navbar content="Chi tiết" />
       </Wrapper>
     </Page>
   );

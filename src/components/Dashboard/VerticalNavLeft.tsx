@@ -25,7 +25,7 @@ const Logo = styled.div`
   position: absolute;
   width: 80px;
   height: 64px;
-  left: 60px;
+  left: 40px;
   top: 32px;
 `;
 

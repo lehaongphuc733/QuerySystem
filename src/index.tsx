@@ -13,6 +13,9 @@ import { Device } from "./components/Device/Device";
 import { Services } from "./components/Service/Services";
 import { NumberOf } from "./components/NumberOf/NumberOf";
 import { AddDevice } from "./components/Device/AddDevice";
+import { DetailDevice } from "./components/Device/Detail/DetailDevice";
+import { UpdateDevice } from "./components/Device/Update/UpdateDevice";
+import { DetailService } from "./components/Service/Detail/DetailService";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -27,6 +30,9 @@ root.render(
         <Route path="/info" element={<PageInf />} />
         <Route path="/device" element={<Device />} />
         <Route path="/add-device" element={<AddDevice />} />
+        <Route path="/detail-device" element={<DetailDevice />} />
+        <Route path="/update-device" element={<UpdateDevice />} />
+        <Route path="/detail-service" element={<DetailService />} />
         <Route path="/services" element={<Services />} />
         <Route path="/numberof" element={<NumberOf />} />
         <Route path="/quen-mat-khau" element={<GivePassAgain />} />

@@ -23,6 +23,65 @@ const WrapperSt = styled.div`
   flex-direction: row;
 `;
 
+const Block1 = styled.div`
+  position: absolute;
+  width: 300px;
+  height: 72px;
+  left: 224px;
+  top: 156px;
+`;
+const Block2 = styled.div`
+  position: absolute;
+  width: 300px;
+  height: 72px;
+  left: 520px;
+  top: 156px;
+`;
+const Block3 = styled.div`
+  /* border: 0.2px solid #e4e4e6; */
+  position: absolute;
+  width: 300px;
+  height: 72px;
+  left: 1054px;
+  top: 156px;
+`;
+
+const P = styled.p`
+  font-weight: 500;
+`;
+
+const FormSelect = styled.div``;
+
+const Select = styled.select``;
+
+const Option = styled.option``;
+
+const Input = styled.input`
+  width: 250px;
+  font-size: 18px;
+  border: 0.2px solid #e4e4e6;
+  border-radius: 10px;
+  padding: 12px;
+`;
+
+// const Header = styled.div``;
+
+// const HBlock1 = styled.div``;
+// const Title = styled.p``;
+// const FormSelect = styled.div``;
+// const Select = styled.select``;
+// const Option = styled.option``;
+
+// const HBlock2 = styled.div``;
+// const HBlock3 = styled.div``;
+// const HBlock4 = styled.div``;
+// const Search = styled.div``;
+// const Input = styled.input``;
+
+const TableSt = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 const Statiscals = styled.div`
   border-radius: 12px;
   position: absolute;
@@ -39,7 +98,7 @@ const Table = styled.table`
   top: -60px;
   left: -60px;
   width: 1300px;
-  height: 400px;
+  height: 600px;
   border-collapse: collapse;
   border-width: 1px;
   zoom: 95%;
@@ -83,7 +142,7 @@ const IconGreen = styled.div`
   background-color: green;
 `;
 
-const FormAdd = styled.div`
+const FormService = styled.div`
   margin: auto;
   position: absolute;
   top: 275px;
@@ -94,7 +153,7 @@ const FormAdd = styled.div`
   }
 `;
 
-const ButtonAdd = styled.button`
+const ButtonService = styled.button`
   background-color: #fff2e7;
   width: 80px;
   border: none;
@@ -157,88 +216,7 @@ const Dot = styled.div``;
 
 const Next = styled.div``;
 
-const Block1 = styled.div`
-  position: absolute;
-  width: 300px;
-  height: 72px;
-  left: 224px;
-  top: 156px;
-`;
-const Block2 = styled.div`
-  position: absolute;
-  width: 300px;
-  height: 72px;
-  left: 520px;
-  top: 156px;
-`;
-const Block3 = styled.div`
-  /* border: 0.2px solid #e4e4e6; */
-  position: absolute;
-  width: 300px;
-  height: 72px;
-  left: 1054px;
-  top: 156px;
-`;
-
-const P = styled.p`
-  font-weight: 500;
-`;
-
-const Dropdown = styled.div`
-  position: relative;
-  width: 250px;
-`;
-
-const DropdownSelect = styled.div`
-  padding: 3px;
-  border-radius: 12px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 20px;
-  cursor: pointer;
-`;
-
-const DropdownList = styled.div``;
-
-const FormSelect = styled.div``;
-
-const Select = styled.select``;
-
-const Option = styled.option``;
-
-const Item = styled.div``;
-
-const SpanSelect = styled.span`
-  margin-left: 10px;
-`;
-
-const Label = styled.label`
-  margin-left: 0px;
-  margin-top: 6px;
-`;
-
-const Button = styled.button`
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #ffffff;
-  width: 250px;
-  border: 0.2px solid #5f3d3d;
-  border-radius: 10px;
-  padding: auto;
-`;
-
-const Input = styled.input`
-  width: 250px;
-  font-size: 18px;
-  border: 0.2px solid #e4e4e6;
-  border-radius: 10px;
-  padding: 12px;
-`;
-
-export const StatiscalDevice = () => {
+export const StatiscalService = () => {
   return (
     <Container>
       <Wrapper>
@@ -262,7 +240,7 @@ export const StatiscalDevice = () => {
           </FormSelect>
         </Block1>
         <Block2>
-          <P>Trạng thái kết nối</P>
+          <P>Chọn thời gian</P>
 
           <FormSelect className="dv-form-sl">
             <Select className="dv-select">
@@ -294,23 +272,78 @@ export const StatiscalDevice = () => {
           />
         </Block3>
       </Wrapper>
-      <WrapperSt>
+      {/* <Header>
+        <HBlock1>
+          <Title>Trạng thái hoạt động</Title>
+          <FormSelect>
+            <Select>
+              <Option>Tất cả</Option>
+              <Option>Hoạt động</Option>
+              <Option>Ngưng hoạt động</Option>
+            </Select>
+          </FormSelect>
+        </HBlock1>
+        <HBlock2>
+          <Title>Chọn thời gian</Title>
+        </HBlock2>
+        <HBlock3>
+        </HBlock3>
+        <HBlock4>
+          <Title>Từ khóa</Title>
+          <Search>
+            <Input type="text" placeholder="Nhập từ khóa"></Input>
+          </Search>
+        </HBlock4>
+      </Header> */}
+      <TableSt>
         <Statiscals>
           <Table className="dv-table">
             <Tr>
-              <Th>Mã thiết bị</Th>
-              <Th>Tên thiết bị</Th>
-              <Th>Địa chỉ IP</Th>
+              <Th>Mã dịch vụ</Th>
+              <Th>Tên dịch vụ</Th>
+              <Th>Mô tả</Th>
               <Th>Trạng thái hoạt động</Th>
-              <Th>Trạng thái kết nối</Th>
-              <Th>Dịch vụ sử dụng</Th>
               <Th></Th>
               <Th></Th>
             </Tr>
             <Tr>
               <Td>KIO_01</Td>
               <Td>Kiosk</Td>
-              <Td>192.168.1.10</Td>
+              <Td>Mô tả dịch vụ 1</Td>
+              <Td>
+                <RowIcon>
+                  <IconGreen></IconGreen>
+                  <RowLabel>Hoạt động</RowLabel>
+                </RowIcon>
+              </Td>
+              <Td>
+                <Link to={"/detail-service"}>Chi tiết</Link>
+              </Td>
+              <Td>
+                <Link to={"/update-device"}>Cập nhật</Link>
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>KIO_01</Td>
+              <Td>Kiosk</Td>
+              <Td>Hoạt động</Td>
+              <Td>
+                <RowIcon>
+                  <IconGreen></IconGreen>
+                  <RowLabel>Hoạt động</RowLabel>
+                </RowIcon>
+              </Td>
+              <Td>
+                <Link to={"/detail-device"}>Chi tiết</Link>
+              </Td>
+              <Td>
+                <Link to={"/update-device"}>Cập nhật</Link>
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>KIO_01</Td>
+              <Td>Kiosk</Td>
+              <Td>Hoạt động</Td>
               <Td>
                 <RowIcon>
                   <IconRed></IconRed>
@@ -318,16 +351,6 @@ export const StatiscalDevice = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <RowIcon>
-                  <IconRed></IconRed>
-                  <RowLabel>Mất kết nối</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td id="row-6">
-                Khám tim mạch, khám mắt...
-                <Link to={"#"}>Xem thêm</Link>
-              </Td>
-              <Td>
                 <Link to={"/detail-device"}>Chi tiết</Link>
               </Td>
               <Td>
@@ -337,7 +360,7 @@ export const StatiscalDevice = () => {
             <Tr>
               <Td>KIO_01</Td>
               <Td>Kiosk</Td>
-              <Td>192.168.1.10</Td>
+              <Td>Hoạt động</Td>
               <Td>
                 <RowIcon>
                   <IconGreen></IconGreen>
@@ -345,16 +368,6 @@ export const StatiscalDevice = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <RowIcon>
-                  <IconGreen></IconGreen>
-                  <RowLabel>Kết nối</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td id="row-6">
-                Khám tim mạch, khám mắt...
-                <Link to={"#"}>Xem thêm</Link>
-              </Td>
-              <Td>
                 <Link to={"/detail-device"}>Chi tiết</Link>
               </Td>
               <Td>
@@ -364,7 +377,7 @@ export const StatiscalDevice = () => {
             <Tr>
               <Td>KIO_01</Td>
               <Td>Kiosk</Td>
-              <Td>192.168.1.10</Td>
+              <Td>Hoạt động</Td>
               <Td>
                 <RowIcon>
                   <IconGreen></IconGreen>
@@ -372,16 +385,6 @@ export const StatiscalDevice = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <RowIcon>
-                  <IconRed></IconRed>
-                  <RowLabel>Mất kết nối</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td id="row-6">
-                Khám tim mạch, khám mắt...
-                <Link to={"#"}>Xem thêm</Link>
-              </Td>
-              <Td>
                 <Link to={"/detail-device"}>Chi tiết</Link>
               </Td>
               <Td>
@@ -391,34 +394,7 @@ export const StatiscalDevice = () => {
             <Tr>
               <Td>KIO_01</Td>
               <Td>Kiosk</Td>
-              <Td>192.168.1.10</Td>
-              <Td>
-                <RowIcon>
-                  <IconRed></IconRed>
-                  <RowLabel>Ngưng hoạt động</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>
-                <RowIcon>
-                  <IconGreen></IconGreen>
-                  <RowLabel>Kết nối</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td id="row-6">
-                Khám tim mạch, khám mắt...
-                <Link to={"#"}>Xem thêm</Link>
-              </Td>
-              <Td>
-                <Link to={"/detail-device"}>Chi tiết</Link>
-              </Td>
-              <Td>
-                <Link to={"/update-device"}>Cập nhật</Link>
-              </Td>
-            </Tr>
-            <Tr>
-              <Td>KIO_01</Td>
-              <Td>Kiosk</Td>
-              <Td>192.168.1.10</Td>
+              <Td>Hoạt động</Td>
               <Td>
                 <RowIcon>
                   <IconGreen></IconGreen>
@@ -426,16 +402,6 @@ export const StatiscalDevice = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <RowIcon>
-                  <IconRed></IconRed>
-                  <RowLabel>Mất kết nối</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td id="row-6">
-                Khám tim mạch, khám mắt...
-                <Link to={"#"}>Xem thêm</Link>
-              </Td>
-              <Td>
                 <Link to={"/detail-device"}>Chi tiết</Link>
               </Td>
               <Td>
@@ -445,7 +411,7 @@ export const StatiscalDevice = () => {
             <Tr>
               <Td>KIO_01</Td>
               <Td>Kiosk</Td>
-              <Td>192.168.1.10</Td>
+              <Td>Hoạt động</Td>
               <Td>
                 <RowIcon>
                   <IconGreen></IconGreen>
@@ -453,16 +419,6 @@ export const StatiscalDevice = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <RowIcon>
-                  <IconGreen></IconGreen>
-                  <RowLabel>Kết nối</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td id="row-6">
-                Khám tim mạch, khám mắt...
-                <Link to={"#"}>Xem thêm</Link>
-              </Td>
-              <Td>
                 <Link to={"/detail-device"}>Chi tiết</Link>
               </Td>
               <Td>
@@ -472,7 +428,7 @@ export const StatiscalDevice = () => {
             <Tr>
               <Td>KIO_01</Td>
               <Td>Kiosk</Td>
-              <Td>192.168.1.10</Td>
+              <Td>Hoạt động</Td>
               <Td>
                 <RowIcon>
                   <IconRed></IconRed>
@@ -480,16 +436,6 @@ export const StatiscalDevice = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <RowIcon>
-                  <IconGreen></IconGreen>
-                  <RowLabel>Kết nối</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td id="row-6">
-                Khám tim mạch, khám mắt...
-                <Link to={"#"}>Xem thêm</Link>
-              </Td>
-              <Td>
                 <Link to={"/detail-device"}>Chi tiết</Link>
               </Td>
               <Td>
@@ -499,49 +445,12 @@ export const StatiscalDevice = () => {
             <Tr>
               <Td>KIO_01</Td>
               <Td>Kiosk</Td>
-              <Td>192.168.1.10</Td>
+              <Td>Hoạt động</Td>
               <Td>
                 <RowIcon>
                   <IconGreen></IconGreen>
                   <RowLabel>Hoạt động</RowLabel>
                 </RowIcon>
-              </Td>
-              <Td>
-                <RowIcon>
-                  <IconGreen></IconGreen>
-                  <RowLabel>Kết nối</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td id="row-6">
-                Khám tim mạch, khám mắt...
-                <Link to={"#"}>Xem thêm</Link>
-              </Td>
-              <Td>
-                <Link to={"/detail-device"}>Chi tiết</Link>
-              </Td>
-              <Td>
-                <Link to={"/update-device"}>Cập nhật</Link>
-              </Td>
-            </Tr>
-            <Tr>
-              <Td>KIO_01</Td>
-              <Td>Kiosk</Td>
-              <Td>192.168.1.10</Td>
-              <Td>
-                <RowIcon>
-                  <IconGreen></IconGreen>
-                  <RowLabel>Hoạt động</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>
-                <RowIcon>
-                  <IconRed></IconRed>
-                  <RowLabel>Mất kết nối</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td id="row-6">
-                Khám tim mạch, khám mắt...
-                <Link to={"#"}>Xem thêm</Link>
               </Td>
               <Td>
                 <Link to={"/detail-device"}>Chi tiết</Link>
@@ -552,9 +461,9 @@ export const StatiscalDevice = () => {
             </Tr>
           </Table>
         </Statiscals>
-        <FormAdd>
+        <FormService>
           <Link to={"/add-device"} className="db-fAdd">
-            <ButtonAdd>
+            <ButtonService>
               <Add
                 style={{
                   borderRadius: "25%",
@@ -564,11 +473,11 @@ export const StatiscalDevice = () => {
                   marginTop: "14px",
                 }}
               />
-              <LabelAdd>Thêm thiết bị</LabelAdd>
-            </ButtonAdd>
+              <LabelAdd>Thêm dịch vụ</LabelAdd>
+            </ButtonService>
           </Link>
-        </FormAdd>
-      </WrapperSt>
+        </FormService>
+      </TableSt>
       <TabNext className="dv-tag">
         <Pre className="dv-tag-con">
           <Link to={"#"}>

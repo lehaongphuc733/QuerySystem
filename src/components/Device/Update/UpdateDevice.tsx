@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { VerticalNavLeft } from "../Dashboard/VerticalNavLeft";
-import { Navbar } from "./../Dashboard/Navbar";
-import { StatiscalService } from "./StatiscalService";
+import { VerticalNavLeft } from "../../Dashboard/VerticalNavLeft";
+import { Navbar } from "./../../Dashboard/Navbar";
+import { FUpdate } from "./FUpdate";
 
 const Page = styled.div`
   height: 900px;
@@ -31,15 +31,14 @@ const Label = styled.label`
   line-height: 36px;
   color: #ff7506;
 `;
-
-export const Services = () => {
+export const UpdateDevice = () => {
   return (
     <Page>
       <Wrapper>
-        <Label>Quản lý dịch vụ</Label>
+        <Label>Quản lý thiết bị</Label>
         <VerticalNavLeft />
-        <StatiscalService />
-        <Navbar content="Dịch vụ" />
+        <FUpdate />
+        <Navbar content="Chi tiết thiết bị" />
       </Wrapper>
     </Page>
   );

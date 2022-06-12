@@ -86,7 +86,14 @@ const Column = styled.div`
 `;
 
 const Name = styled.p`
-  font-size: 20px;
+  font-size: 14px;
+`;
+
+const FrameSV = styled.div`
+  border: 0.2px solid #ffac6a;
+  border-radius: 12px;
+  width: 1075px;
+  height: 150px;
 `;
 
 const Span = styled.span`
@@ -98,7 +105,7 @@ const Input = styled.input`
   border-radius: 12px;
   border: 0.2px solid #e4e4e6;
   padding: 10px;
-  font-size: 18px;
+  font-size: 14px;
   pointer-events: none;
 `;
 const Inputs = styled.input`
@@ -106,7 +113,7 @@ const Inputs = styled.input`
   border-radius: 12px;
   border: 0.2px solid #e4e4e6;
   padding: 10px;
-  font-size: 18px;
+  font-size: 14px;
   pointer-events: none;
 `;
 
@@ -115,9 +122,9 @@ const Select = styled.select`
   border-radius: 12px;
   border: 0.2px solid #e4e4e6;
   padding: 10px;
-  font-size: 18px;
+  font-size: 14px;
 
-  pointer-events: none;
+  /* pointer-events: none; */
 
   appearance: none;
   -webkit-appearance: none;
@@ -132,7 +139,7 @@ const P = styled.p`
   color: #89888d;
 `;
 
-export const AddDeviceDT = () => {
+export const FUpdate = () => {
   return (
     <Container>
       <Title>Thông tin thiết bị</Title>
@@ -141,24 +148,28 @@ export const AddDeviceDT = () => {
           <Name>
             Mã thiết bị: <Span>*</Span>
           </Name>
-          <Input type="text" placeholder="Nhập mã thiết bị"></Input>
+          <Input
+            type="text"
+            placeholder="Nhập mã thiết bị"
+            value="KIO_01"
+          ></Input>
         </Column>
         <Column>
           <Name>
             Loại thiết bị: <Span>*</Span>
           </Name>
           <Select>
-            <Option id="add-dv-op" selected>
+            {/* <Option id="add-dv-op">
               <P>Chọn loại thiết bị</P>
-            </Option>
-            <Option>Kiosk</Option>
+            </Option> */}
+            <Option selected>Kiosk</Option>
             <Option>Display counter</Option>
           </Select>
           <ArrowDropDown
             style={{
               color: "orange",
               position: "absolute",
-              top: "65px",
+              top: "40px",
               left: "1030px",
               fontSize: "3rem",
             }}
@@ -170,13 +181,21 @@ export const AddDeviceDT = () => {
           <Name>
             Tên thiết bị: <Span>*</Span>
           </Name>
-          <Input type="text" placeholder="Nhập tên thiết bị"></Input>
+          <Input
+            type="text"
+            value="Kiosk"
+            placeholder="Nhập tên thiết bị"
+          ></Input>
         </Column>
         <Column>
           <Name>
             Tên đăng nhập: <Span>*</Span>
           </Name>
-          <Input type="text" placeholder="Nhập tài khoản"></Input>
+          <Input
+            type="text"
+            value="Linhkyo011"
+            placeholder="Nhập tài khoản"
+          ></Input>
         </Column>
       </Row>
       <Row>
@@ -184,13 +203,17 @@ export const AddDeviceDT = () => {
           <Name>
             Địa chỉ IP: <Span>*</Span>
           </Name>
-          <Input type="text" placeholder="Nhập mã thiết bị"></Input>
+          <Input
+            type="text"
+            value="128.172.308"
+            placeholder="Nhập mã thiết bị"
+          ></Input>
         </Column>
         <Column>
           <Name>
             Mật khẩu: <Span>*</Span>
           </Name>
-          <Input type="password" placeholder="Nhập mật khẩu"></Input>
+          <Input type="text" value="CMS" placeholder="Nhập mật khẩu"></Input>
         </Column>
       </Row>
       <Row>
@@ -198,7 +221,8 @@ export const AddDeviceDT = () => {
           <Name>
             Dịch vụ sử dụng: <Span>*</Span>
           </Name>
-          <Inputs type="text" placeholder="Nhập dịch vụ sử dụng"></Inputs>
+          <FrameSV></FrameSV>
+          {/* <Inputs type="text" placeholder="Nhập dịch vụ sử dụng"></Inputs> */}
         </Column>
       </Row>
       <Row>
@@ -216,7 +240,7 @@ export const AddDeviceDT = () => {
         </ButtonCancel>
         <ButtonAdd>
           <Link to={"/device"}>
-            <BAdd>Thêm thiết bị</BAdd>
+            <BAdd>Cập nhật</BAdd>
           </Link>
         </ButtonAdd>
       </ButtonForm>
