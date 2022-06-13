@@ -320,7 +320,7 @@ export const StatiscalService = () => {
                 <Link to={"/detail-service"}>Chi tiết</Link>
               </Td>
               <Td>
-                <Link to={"/update-device"}>Cập nhật</Link>
+                <Link to={"/update-service"}>Cập nhật</Link>
               </Td>
             </Tr>
             <Tr>
@@ -334,10 +334,10 @@ export const StatiscalService = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <Link to={"/detail-device"}>Chi tiết</Link>
+                <Link to={"/detail-service"}>Chi tiết</Link>
               </Td>
               <Td>
-                <Link to={"/update-device"}>Cập nhật</Link>
+                <Link to={"/update-service"}>Cập nhật</Link>
               </Td>
             </Tr>
             <Tr>
@@ -351,27 +351,10 @@ export const StatiscalService = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <Link to={"/detail-device"}>Chi tiết</Link>
+                <Link to={"/detail-service"}>Chi tiết</Link>
               </Td>
               <Td>
-                <Link to={"/update-device"}>Cập nhật</Link>
-              </Td>
-            </Tr>
-            <Tr>
-              <Td>KIO_01</Td>
-              <Td>Kiosk</Td>
-              <Td>Hoạt động</Td>
-              <Td>
-                <RowIcon>
-                  <IconGreen></IconGreen>
-                  <RowLabel>Hoạt động</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>
-                <Link to={"/detail-device"}>Chi tiết</Link>
-              </Td>
-              <Td>
-                <Link to={"/update-device"}>Cập nhật</Link>
+                <Link to={"/update-service"}>Cập nhật</Link>
               </Td>
             </Tr>
             <Tr>
@@ -385,27 +368,10 @@ export const StatiscalService = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <Link to={"/detail-device"}>Chi tiết</Link>
+                <Link to={"/detail-service"}>Chi tiết</Link>
               </Td>
               <Td>
-                <Link to={"/update-device"}>Cập nhật</Link>
-              </Td>
-            </Tr>
-            <Tr>
-              <Td>KIO_01</Td>
-              <Td>Kiosk</Td>
-              <Td>Hoạt động</Td>
-              <Td>
-                <RowIcon>
-                  <IconGreen></IconGreen>
-                  <RowLabel>Hoạt động</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>
-                <Link to={"/detail-device"}>Chi tiết</Link>
-              </Td>
-              <Td>
-                <Link to={"/update-device"}>Cập nhật</Link>
+                <Link to={"/update-service"}>Cập nhật</Link>
               </Td>
             </Tr>
             <Tr>
@@ -419,10 +385,44 @@ export const StatiscalService = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <Link to={"/detail-device"}>Chi tiết</Link>
+                <Link to={"/detail-service"}>Chi tiết</Link>
               </Td>
               <Td>
-                <Link to={"/update-device"}>Cập nhật</Link>
+                <Link to={"/update-service"}>Cập nhật</Link>
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>KIO_01</Td>
+              <Td>Kiosk</Td>
+              <Td>Hoạt động</Td>
+              <Td>
+                <RowIcon>
+                  <IconGreen></IconGreen>
+                  <RowLabel>Hoạt động</RowLabel>
+                </RowIcon>
+              </Td>
+              <Td>
+                <Link to={"/detail-service"}>Chi tiết</Link>
+              </Td>
+              <Td>
+                <Link to={"/update-service"}>Cập nhật</Link>
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>KIO_01</Td>
+              <Td>Kiosk</Td>
+              <Td>Hoạt động</Td>
+              <Td>
+                <RowIcon>
+                  <IconGreen></IconGreen>
+                  <RowLabel>Hoạt động</RowLabel>
+                </RowIcon>
+              </Td>
+              <Td>
+                <Link to={"/detail-service"}>Chi tiết</Link>
+              </Td>
+              <Td>
+                <Link to={"/update-service"}>Cập nhật</Link>
               </Td>
             </Tr>
             <Tr>
@@ -436,10 +436,10 @@ export const StatiscalService = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <Link to={"/detail-device"}>Chi tiết</Link>
+                <Link to={"/detail-service"}>Chi tiết</Link>
               </Td>
               <Td>
-                <Link to={"/update-device"}>Cập nhật</Link>
+                <Link to={"/update-service"}>Cập nhật</Link>
               </Td>
             </Tr>
             <Tr>
@@ -453,16 +453,16 @@ export const StatiscalService = () => {
                 </RowIcon>
               </Td>
               <Td>
-                <Link to={"/detail-device"}>Chi tiết</Link>
+                <Link to={"/detail-service"}>Chi tiết</Link>
               </Td>
               <Td>
-                <Link to={"/update-device"}>Cập nhật</Link>
+                <Link to={"/update-service"}>Cập nhật</Link>
               </Td>
             </Tr>
           </Table>
         </Statiscals>
         <FormService>
-          <Link to={"/add-device"} className="db-fAdd">
+          <Link to={"/add-service"} className="db-fAdd">
             <ButtonService>
               <Add
                 style={{

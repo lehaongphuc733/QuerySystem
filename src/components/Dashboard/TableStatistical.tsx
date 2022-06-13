@@ -114,10 +114,14 @@ const LbSort = styled.label`
 `;
 
 const Select = styled.select`
-  border: 0.2px solid gray;
+  outline: 0.2px solid #9c959a;
   border-radius: 12px;
   width: 100px;
   height: 50px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 `;
 
 const Option = styled.option``;
@@ -160,7 +164,15 @@ export const TableStatistical = () => {
               <Option value="week">Tuần</Option>
               <Option value="month">Tháng</Option>
             </Select>
-            {/* <ArrowDropDown /> */}
+            <ArrowDropDown
+              style={{
+                color: "orange",
+                position: "absolute",
+                top: "30px",
+                left: "720px",
+                fontSize: "3rem",
+              }}
+            />
           </Right>
         </Nav>
         <Line style={{ marginTop: "60px" }} data={data} options={options} />
