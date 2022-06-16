@@ -236,12 +236,13 @@ const LabelRe = styled.label`
 
 const Table = styled.table`
   position: absolute;
-  border-radius: 50px;
+  border-radius: 1em;
   top: -220px;
   left: 170px;
   width: 800px;
   height: 550px;
   border-collapse: collapse;
+  overflow: hidden;
   border-width: 1px;
   zoom: 95%;
   transform: scale(calc(8 / 9));

@@ -18,6 +18,9 @@ import { UpdateDevice } from "./components/Device/Update/UpdateDevice";
 import { DetailService } from "./components/Service/Detail/DetailService";
 import { UpdateService } from "./components/Service/Update/UpdateService";
 import { AddService } from "./components/Service/Add/AddService";
+import { DetailNumber } from "./components/NumberOf/Detail/DetailNumber";
+import { AddNumber } from "./components/NumberOf/AddNumber/AddNumber";
+import { NewNumber } from "./components/NumberOf/AddNumber/NewNumber";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -27,18 +30,30 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+        {/* Dashboard */}
         <Route path="/" element={<App />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/info" element={<PageInf />} />
+
+        {/* Device */}
         <Route path="/device" element={<Device />} />
         <Route path="/add-device" element={<AddDevice />} />
         <Route path="/detail-device" element={<DetailDevice />} />
         <Route path="/update-device" element={<UpdateDevice />} />
+
+        {/* Service */}
         <Route path="/add-service" element={<AddService />} />
         <Route path="/detail-service" element={<DetailService />} />
         <Route path="/update-service" element={<UpdateService />} />
         <Route path="/services" element={<Services />} />
+
+        {/* NumberOf */}
         <Route path="/numberof" element={<NumberOf />} />
+        <Route path="/detail-number" element={<DetailNumber />} />
+        <Route path="/add-number" element={<AddNumber />} />
+        {/* <Route path="/new-number" element={<NewNumber />} /> */}
+
+        {/* User */}
         <Route path="/quen-mat-khau" element={<GivePassAgain />} />
         <Route
           path="/login"

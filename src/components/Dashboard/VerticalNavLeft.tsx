@@ -130,14 +130,14 @@ export const VerticalNavLeft = () => {
             <P style={{ flex: "3", margin: "auto" }}> Cài đặt hệ thống </P>
             <MoreVert style={{ margin: "auto" }} />
             <Dropdown className="dropdown">
-              <Link to={"#"}>
+              <Link to={"/services"}>
                 <P style={{ marginLeft: "16px" }}>Quản lý vai trò</P>
               </Link>
-              <Link to={"#"}>
+              <Link to={"/device"}>
                 <P style={{ marginLeft: "16px" }}>Quản lý tài khoản</P>
               </Link>
-              <Link to={"#"}>
-                <P style={{ marginLeft: "16px" }}>QNhật ký người dùng</P>
+              <Link to={"/services"}>
+                <P style={{ marginLeft: "16px" }}>Nhật ký người dùng</P>
               </Link>
             </Dropdown>
           </Link>

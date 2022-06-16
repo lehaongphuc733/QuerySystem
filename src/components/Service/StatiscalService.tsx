@@ -94,12 +94,13 @@ const Statiscals = styled.div`
 
 const Table = styled.table`
   position: absolute;
-  border-radius: 50px;
+  border-radius: 1em;
   top: -60px;
   left: -60px;
   width: 1300px;
   height: 600px;
   border-collapse: collapse;
+  overflow: hidden;
   border-width: 1px;
   zoom: 95%;
   transform: scale(calc(8 / 9));
@@ -112,7 +113,9 @@ const Th = styled.th`
   font-size: 1.2rem;
 `;
 
-const Td = styled.td``;
+const Td = styled.td`
+  text-align: left;
+`;
 
 const RowIcon = styled.div`
   display: flex;

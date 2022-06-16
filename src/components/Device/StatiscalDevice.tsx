@@ -35,7 +35,8 @@ const Statiscals = styled.div`
 
 const Table = styled.table`
   position: absolute;
-  border-radius: 50px;
+  border-radius: 1em;
+  overflow: hidden;
   top: -60px;
   left: -60px;
   width: 1300px;
@@ -53,7 +54,9 @@ const Th = styled.th`
   font-size: 1.2rem;
 `;
 
-const Td = styled.td``;
+const Td = styled.td`
+  text-align: center;
+`;
 
 const RowIcon = styled.div`
   display: flex;
@@ -184,23 +187,23 @@ const P = styled.p`
   font-weight: 500;
 `;
 
-const Dropdown = styled.div`
-  position: relative;
-  width: 250px;
-`;
+// const Dropdown = styled.div`
+//   position: relative;
+//   width: 250px;
+// `;
 
-const DropdownSelect = styled.div`
-  padding: 3px;
-  border-radius: 12px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 20px;
-  cursor: pointer;
-`;
+// const DropdownSelect = styled.div`
+//   padding: 3px;
+//   border-radius: 12px;
+//   background-color: white;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   font-size: 20px;
+//   cursor: pointer;
+// `;
 
-const DropdownList = styled.div``;
+// const DropdownList = styled.div``;
 
 const FormSelect = styled.div``;
 
@@ -208,27 +211,27 @@ const Select = styled.select``;
 
 const Option = styled.option``;
 
-const Item = styled.div``;
+// const Item = styled.div``;
 
-const SpanSelect = styled.span`
-  margin-left: 10px;
-`;
+// const SpanSelect = styled.span`
+//   margin-left: 10px;
+// `;
 
-const Label = styled.label`
-  margin-left: 0px;
-  margin-top: 6px;
-`;
+// const Label = styled.label`
+//   margin-left: 0px;
+//   margin-top: 6px;
+// `;
 
-const Button = styled.button`
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #ffffff;
-  width: 250px;
-  border: 0.2px solid #5f3d3d;
-  border-radius: 10px;
-  padding: auto;
-`;
+// const Button = styled.button`
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 10px;
+//   background-color: #ffffff;
+//   width: 250px;
+//   border: 0.2px solid #5f3d3d;
+//   border-radius: 10px;
+//   padding: auto;
+// `;
 
 const Input = styled.input`
   width: 250px;

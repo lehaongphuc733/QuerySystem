@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Notifications } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import ava from "../../components/assert/avatar.jpg";
+import { Notice } from "./Notice";
 
 type Content = {
   content: string;
@@ -82,7 +83,8 @@ export const Navbar = (props: Content) => {
         <P>{props.content}</P>
       </NavLeft>
       <NavRight>
-        <Notifications className="noti" />
+        {/* <Notifications className="noti" /> */}
+        <Notice />
         <Link
           to={"/info"}
           style={{

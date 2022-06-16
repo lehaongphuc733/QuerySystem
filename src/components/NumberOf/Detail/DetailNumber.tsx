@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { VerticalNavLeft } from "../Dashboard/VerticalNavLeft";
-import { Navbar } from "./../Dashboard/Navbar";
-import { StatiscalNumber } from "./StatiscalNumber";
+import { Navbar } from "../../Dashboard/Navbar";
+import { VerticalNavLeft } from "../../Dashboard/VerticalNavLeft";
+import { DNumber } from "./DNumber";
 
 const Page = styled.div`
   height: 900px;
@@ -31,15 +31,14 @@ const Label = styled.label`
   line-height: 36px;
   color: #ff7506;
 `;
-
-export const NumberOf = () => {
+export const DetailNumber = () => {
   return (
     <Page>
       <Wrapper>
         <Label>Quản lý cấp số</Label>
         <VerticalNavLeft />
-        <StatiscalNumber />
-        <Navbar content="Cấp số" />
+        <DNumber />
+        <Navbar content="Chi tiết" />
       </Wrapper>
     </Page>
   );

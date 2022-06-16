@@ -105,7 +105,9 @@ const TitleLb = styled.label`
   font-weight: 700;
 `;
 
-const TDate = styled.label``;
+const TDate = styled.label`
+  color: #9c959a;
+`;
 
 const LbSort = styled.label`
   font-size: 18px;
@@ -114,7 +116,8 @@ const LbSort = styled.label`
 `;
 
 const Select = styled.select`
-  outline: 0.2px solid #9c959a;
+  /* outline: 0.2px solid #9c959a; */
+  padding-left: 10px;
   border-radius: 12px;
   width: 100px;
   height: 50px;
@@ -125,6 +128,10 @@ const Select = styled.select`
 `;
 
 const Option = styled.option``;
+
+const Ty = styled.p`
+  margin-left: 10px;
+`;
 
 export const TableStatistical = () => {
   const [chartData, setChartData] = useState({});
