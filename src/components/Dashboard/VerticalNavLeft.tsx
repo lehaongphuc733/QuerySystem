@@ -117,7 +117,7 @@ export const VerticalNavLeft = () => {
           </Link>
         </Option>
         <Option className="option">
-          <Link className="nlink-left-dashboard" to={"/dashboard"}>
+          <Link className="nlink-left-dashboard" to={"/report"}>
             <Assessment
               style={{ color: "#b4b4bb", flex: "1", margin: "auto" }}
             />
@@ -130,10 +130,10 @@ export const VerticalNavLeft = () => {
             <P style={{ flex: "3", margin: "auto" }}> Cài đặt hệ thống </P>
             <MoreVert style={{ margin: "auto" }} />
             <Dropdown className="dropdown">
-              <Link to={"/services"}>
+              <Link to={"/manage-role"}>
                 <P style={{ marginLeft: "16px" }}>Quản lý vai trò</P>
               </Link>
-              <Link to={"/device"}>
+              <Link to={"/manage-account"}>
                 <P style={{ marginLeft: "16px" }}>Quản lý tài khoản</P>
               </Link>
               <Link to={"/services"}>

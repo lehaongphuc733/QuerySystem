@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React, { Component, useState } from "react";
-import { VisibilityOff, ErrorOutline } from "@material-ui/icons";
+import { VisibilityOff, ErrorOutline, Visibility } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import logoLogin from "../../src/components/assert/logo_login.jpg";
 import imageRight from "../../src/components/assert/image_right.jpg";
@@ -53,7 +53,8 @@ const Label = styled.label`
 
 const Input = styled.input`
   padding: 10px;
-  border-radius: 5%;
+  border-radius: 12px;
+  width: 300px;
   border: 2px solid #6d6761;
   font-size: 18px;
   border: none;
@@ -64,7 +65,8 @@ const ObVisibilityOff = styled.div`
 `;
 
 const PassContainer = styled.div`
-  border: 0.5px solid lightgray;
+  border: 0.2px solid lightgray;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   padding: none;
@@ -133,70 +135,83 @@ const ImageRight = styled.img`
 `;
 
 export const Login = (props: User) => {
-  const HandleEye = () => {
-    // var x = document.getElementById("myInput");
-    // if (x.type === "password") {
-    //   x.type = "text";
-    // } else {
-    //   x.type = "password";
-    // }
+  const showpw = (pw: string, eyeshow: string, eyehide: string) => {
+    const show: any = document.getElementById(eyeshow);
+    const hide: any = document.getElementById(eyehide);
+    const eye: any = document.getElementById(pw);
+    const type = eye.getAttribute("type") === "password" ? "text" : "password";
+    eye.setAttribute("type", type);
+    if (type === "password") {
+      show.style.display = "flex";
+      hide.style.display = "none";
+    } else {
+      hide.style.display = "flex";
+      show.style.display = "none";
+    }
   };
   return (
-    <div>
-      <Container>
-        <BlockLeft>
-          <Wrapper>
-            <Image src={logoLogin} />
-            <Form>
-              <Label htmlFor="">Tên đăng nhập *</Label>
-              <Input placeholder="username" required value={props.name} />
-              <Label htmlFor="">Mật khẩu *</Label>
-              <PassContainer>
-                <Input
-                  id="myInput"
-                  style={{ width: "17.5rem" }}
-                  placeholder="password"
-                  type={"password"}
-                  value={props.password}
-                  required
-                />
-                {/* <Button onClick={HandleEye}>Show</Button> */}
-                <ObVisibilityOff>
-                  <VisibilityOff
-                    style={{
-                      backgroundColor: "white",
-                      fontSize: "auto",
-                      textAlign: "right",
-                    }}
-                  />
-                </ObVisibilityOff>
-              </PassContainer>
-              <Notification>
-                <ErrorOutline
-                  style={{
-                    color: "red",
-                  }}
-                />
-                <LabelNotification>
-                  Sai tên đăng nhập hoặc mật khẩu
-                </LabelNotification>
-              </Notification>
+    // <div>
+    <Container>
+      <BlockLeft>
+        <Wrapper>
+          <Image src={logoLogin} />
+          <Form>
+            <Label htmlFor="">Tên đăng nhập *</Label>
+            <Input placeholder="username" required value={props.name} />
+            <Label htmlFor="">Mật khẩu *</Label>
+            <PassContainer>
+              <Input type={"password"} id="pw1" value={props.password} />
+              <VisibilityOff
+                className="show"
+                id="show1"
+                style={{
+                  position: "absolute",
+                  top: "500px",
+                  left: "510px",
+                  cursor: "pointer",
+                }}
+                onClick={() => showpw("pw1", "show1", "hide1")}
+              />
+              <Visibility
+                className="hide"
+                id="hide1"
+                style={{
+                  display: "none",
+                  position: "absolute",
+                  top: "500px",
+                  left: "510px",
+                  cursor: "pointer",
+                }}
+                onClick={() => showpw("pw1", "show1", "hide1")}
+              />
+              {/* </ObVisibilityOff> */}
+            </PassContainer>
+            <Notification>
+              <ErrorOutline
+                style={{
+                  color: "red",
+                }}
+              />
+              <LabelNotification>
+                Sai tên đăng nhập hoặc mật khẩu
+              </LabelNotification>
+            </Notification>
 
-              <MainButton>
-                <Link to={"/dashboard"}>
-                  <Button>Đăng Nhập</Button>
-                </Link>
-                <Link to={"/quen-mat-khau"}>
-                  <Links>Quên mật khẩu?</Links>
-                </Link>
-              </MainButton>
-            </Form>
-          </Wrapper>
-        </BlockLeft>
-        <BlockRight>
-          <ImageRight src={imageRight} />
-        </BlockRight>
-      </Container>
-    </div>
+            <MainButton>
+              <Link to={"/dashboard"}>
+                <Button>Đăng Nhập</Button>
+              </Link>
+              <Link to={"/quen-mat-khau"}>
+                <Links>Quên mật khẩu?</Links>
+              </Link>
+            </MainButton>
+          </Form>
+        </Wrapper>
+      </BlockLeft>
+      <BlockRight>
+        <ImageRight src={imageRight} />
+      </BlockRight>
+    </Container>
+    // </div>
   );
 };

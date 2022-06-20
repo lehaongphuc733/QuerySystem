@@ -26,6 +26,35 @@ const Title = styled.p`
   margin-left: 20px;
   color: #ff780c;
 `;
+const A = styled.div`
+  display: flex;
+`;
+const B = styled.div`
+  display: flex;
+`;
+const CheckBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: -20px;
+`;
+const Content = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-top: 0px;
+`;
+const InputCheck = styled.input`
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+  outline: 0.2px solid #0761ca;
+  border-radius: 12px;
+`;
+const LCon = styled.p`
+  margin-left: 20px;
+  margin-top: px;
+`;
 
 const Block2 = styled.div`
   display: flex;
@@ -53,16 +82,25 @@ const Input = styled.input`
 const BRight = styled.div`
   margin-left: 20px;
 `;
+const Form = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #fff2e7;
+  border-radius: 12px;
+  position: absolute;
+  top: 120px;
+  width: 590px;
+  height: 515px;
+`;
 const NameR = styled.p``;
-const Area = styled.area`
-  font-size: 14px;
-  padding: 5px;
-  pointer-events: none;
+const TextArea = styled.textarea`
   width: 555px;
   height: 135px;
-  border: 0.2px solid #9c959a;
+  font-size: 14px;
+  pointer-events: none;
   border-radius: 12px;
 `;
+
 const InputR = styled.input`
   font-size: 14px;
   padding: 5px;
@@ -177,7 +215,7 @@ const ButtonForm = styled.div`
   margin-top: 10px;
   display: flex;
   position: absolute;
-  top: 540px;
+  top: 640px;
   text-align: center;
 `;
 const ButtonCancel = styled.div`
@@ -216,62 +254,76 @@ const BCancel = styled.button`
   height: 50px;
 `;
 
-export const UService = () => {
+export const URole = () => {
   return (
     <Container>
       <Block1>
-        <Title>Thông tin dịch vụ</Title>
+        <Title>Thông tin vai trò</Title>
       </Block1>
       <Block2>
         <BLeft>
           <Name>
-            Mã dịch vụ: <Span>*</Span>
+            Tên vai trò: <Span>*</Span>
           </Name>
-          <Input type="text" value="201"></Input>
+          <Input type="text" value="Kế toán"></Input>
           {/* // */}
           <Name>
-            Tên dịch vụ: <Span>*</Span>
+            Mô tả: <Span>*</Span>
           </Name>
-          <Input type="text" value="Khám tim mạch"></Input>
+          <TextArea rows={1} cols={75}>
+            Chịu trách nhiệm thống kê số liệu và kiểm toán
+          </TextArea>
         </BLeft>
         <BRight>
-          <NameR>Mô tả: </NameR>
-          {/* <Area>Mô tả dịch vụ</Area> */}
-          <InputR type="" value=""></InputR>
+          <NameR>
+            Phân quyền chức năng: <Span>*</Span>
+          </NameR>
+          <Form>
+            <Title>Nhóm chức năng A</Title>
+            <A>
+              <CheckBox>
+                <Content>
+                  <InputCheck type="checkbox"></InputCheck>
+                  <LCon>Tất cả</LCon>
+                </Content>
+                <Content>
+                  <InputCheck type="checkbox"></InputCheck>
+                  <LCon>Chức năng x</LCon>
+                </Content>
+                <Content>
+                  <InputCheck type="checkbox"></InputCheck>{" "}
+                  <LCon>Chức năng y</LCon>
+                </Content>
+                <Content>
+                  <InputCheck type="checkbox"></InputCheck>
+                  <LCon>Chức năng z</LCon>
+                </Content>
+              </CheckBox>
+            </A>
+            <Title>Nhóm chức năng B</Title>
+            <B>
+              <CheckBox>
+                <Content>
+                  <InputCheck type="checkbox"></InputCheck>
+                  <LCon>Tất cả</LCon>
+                </Content>
+                <Content>
+                  <InputCheck type="checkbox"></InputCheck>
+                  <LCon>Chức năng x</LCon>
+                </Content>
+                <Content>
+                  <InputCheck type="checkbox"></InputCheck>{" "}
+                  <LCon>Chức năng y</LCon>
+                </Content>
+                <Content>
+                  <InputCheck type="checkbox"></InputCheck>
+                  <LCon>Chức năng z</LCon>
+                </Content>
+              </CheckBox>
+            </B>
+          </Form>
         </BRight>
       </Block2>
-      <Block3>
-        <Title>Quy tắc cấp số</Title>
-        <B2Left>
-          <FormRadio>
-            <RadioI type="checkbox" value="Tăng tự động từ: "></RadioI>
-            <RadioI type="checkbox" value="Tăng tự động từ: "></RadioI>
-            <RadioI type="checkbox" value="Tăng tự động từ: "></RadioI>
-            <RadioI type="checkbox" value="Tăng tự động từ: "></RadioI>
-          </FormRadio>
-          <FormContent>
-            <NCon>Tăng tự động từ: </NCon>
-            <NCon>Prefix: </NCon>
-            <NCon>Surfix: </NCon>
-            <NCon>Reset mỗi ngày: </NCon>
-          </FormContent>
-        </B2Left>
-      </Block3>
-      <Number1>
-        <LNumber1>0001</LNumber1>
-      </Number1>
-      <Lb style={{ position: "absolute", top: "336.5px", left: "252.5px" }}>
-        đến
-      </Lb>
-      <Number2>
-        <LNumber2>9999</LNumber2>
-      </Number2>
-      <Number3>
-        <LNumber3>0001</LNumber3>
-      </Number3>
-      <Number4>
-        <LNumber4>0001</LNumber4>
-      </Number4>
       <Block4>
         <PBl4>
           <Span>* </Span> Là trường thông tin bắt buộc
@@ -279,12 +331,12 @@ export const UService = () => {
       </Block4>
       <ButtonForm className="dv-bcancel">
         <ButtonCancel>
-          <Link to={"/detail-service"}>
+          <Link to={"/manage-role"}>
             <BCancel>Hủy bỏ</BCancel>
           </Link>
         </ButtonCancel>
         <ButtonAdd>
-          <Link to={"/detail-service"}>
+          <Link to={"/manage-role"}>
             <BAdd>Cập nhật</BAdd>
           </Link>
         </ButtonAdd>

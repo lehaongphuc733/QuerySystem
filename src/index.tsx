@@ -21,6 +21,11 @@ import { AddService } from "./components/Service/Add/AddService";
 import { DetailNumber } from "./components/NumberOf/Detail/DetailNumber";
 import { AddNumber } from "./components/NumberOf/AddNumber/AddNumber";
 import { NewNumber } from "./components/NumberOf/AddNumber/NewNumber";
+import { Report } from "./components/Report/Report";
+import { ManageRole } from "./components/ManageRole/ManageRole";
+import { UpdateRole } from "./components/ManageRole/UpdateRole/UpdateRole";
+import { AddRole } from "./components/ManageRole/AddRole/AddRole";
+import { MaAcc } from "./components/ManageAccount/MaAcc";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -47,7 +52,7 @@ root.render(
         <Route path="/update-service" element={<UpdateService />} />
         <Route path="/services" element={<Services />} />
 
-        {/* NumberOf */}
+        {/* Number Of */}
         <Route path="/numberof" element={<NumberOf />} />
         <Route path="/detail-number" element={<DetailNumber />} />
         <Route path="/add-number" element={<AddNumber />} />
@@ -60,6 +65,17 @@ root.render(
           element={<Login name="lequynhaivan01" password="12345678" />}
         />
         <Route path="/dat-lai-mat-khau" element={<GivePassAgainNew />} />
+
+        {/*  Report*/}
+        <Route path="/report" element={<Report />} />
+
+        {/* Manage Role */}
+        <Route path="/manage-role" element={<ManageRole />} />
+        <Route path="/update-role" element={<UpdateRole />} />
+        <Route path="/add-role" element={<AddRole />} />
+
+        {/* Manage Account */}
+        <Route path="/manage-account" element={<MaAcc />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

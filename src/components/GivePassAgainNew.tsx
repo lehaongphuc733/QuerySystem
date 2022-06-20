@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import loginLogo from "../../src/components/assert/logo_login.jpg";
 import imageRight from "../../src/components/assert/image_right.jpg";
+import { Visibility, VisibilityOff } from "@material-ui/icons";
 
 const Container = styled.div`
   display: flex;
@@ -41,11 +42,12 @@ const Input = styled.input`
   color: #535261;
   font-size: 18px;
   border: 2px solid #dcdcde;
-  border-radius: 4%;
+  border-radius: 12px;
   padding: 12px;
 `;
 
 const MainButton = styled.div`
+  /* border-radius: 12px; */
   margin-bottom: -20px;
   display: flex;
   /* align-items: center; */
@@ -65,7 +67,7 @@ const Button = styled.button`
   width: 10rem;
   height: 2rem;
   color: white;
-  border-radius: 10%;
+  border-radius: 12px;
 `;
 
 const BlockRight = styled.div`
@@ -81,6 +83,20 @@ const ImageRight = styled.img`
 `;
 
 export const GivePassAgainNew = () => {
+  const showpw = (pw: string, eyeshow: string, eyehide: string) => {
+    const show: any = document.getElementById(eyeshow);
+    const hide: any = document.getElementById(eyehide);
+    const eye: any = document.getElementById(pw);
+    const type = eye.getAttribute("type") === "password" ? "text" : "password";
+    eye.setAttribute("type", type);
+    if (type === "password") {
+      show.style.display = "flex";
+      hide.style.display = "none";
+    } else {
+      hide.style.display = "flex";
+      show.style.display = "none";
+    }
+  };
   return (
     <div>
       <Container>
@@ -98,15 +114,63 @@ export const GivePassAgainNew = () => {
                 Đặt lại mật khẩu mới
               </Label>
               <Label>Mật khẩu</Label>
-              <Input type={"password"} />
+              <Input type={"password"} id="pw1" />
+              <VisibilityOff
+                className="show"
+                id="show1"
+                style={{
+                  position: "absolute",
+                  top: "530px",
+                  left: "500px",
+                  cursor: "pointer",
+                }}
+                onClick={() => showpw("pw1", "show1", "hide1")}
+              />
+              <Visibility
+                className="hide"
+                id="hide1"
+                style={{
+                  display: "none",
+                  position: "absolute",
+                  top: "530px",
+                  left: "500px",
+                  cursor: "pointer",
+                }}
+                onClick={() => showpw("pw1", "show1", "hide1")}
+              />
               <Label>Nhập lại mật khẩu</Label>
-              <Input type={"password"} />
+              <Input type={"password"} id="pw2" />
+              <VisibilityOff
+                className="show"
+                id="show2"
+                style={{
+                  position: "absolute",
+                  top: "620px",
+                  left: "500px",
+                  cursor: "pointer",
+                }}
+                onClick={() => showpw("pw2", "show2", "hide2")}
+              />
+              <Visibility
+                className="hide"
+                id="hide2"
+                style={{
+                  display: "none",
+                  position: "absolute",
+                  top: "620px",
+                  left: "500px",
+                  cursor: "pointer",
+                }}
+                onClick={() => showpw("pw2", "show2", "hide2")}
+              />
               <MainButton>
-                <Button
-                  style={{ color: "#fff9f4", backgroundColor: "#ff9138" }}
-                >
-                  Xác nhận
-                </Button>
+                <Link to={"/login"}>
+                  <Button
+                    style={{ color: "#fff9f4", backgroundColor: "#ff9138" }}
+                  >
+                    Xác nhận
+                  </Button>
+                </Link>
               </MainButton>
             </Form>
           </Wrapper>
