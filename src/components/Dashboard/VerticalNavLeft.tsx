@@ -136,7 +136,7 @@ export const VerticalNavLeft = () => {
               <Link to={"/manage-account"}>
                 <P style={{ marginLeft: "16px" }}>Quản lý tài khoản</P>
               </Link>
-              <Link to={"/services"}>
+              <Link to={"/user-log"}>
                 <P style={{ marginLeft: "16px" }}>Nhật ký người dùng</P>
               </Link>
             </Dropdown>

@@ -26,6 +26,9 @@ import { ManageRole } from "./components/ManageRole/ManageRole";
 import { UpdateRole } from "./components/ManageRole/UpdateRole/UpdateRole";
 import { AddRole } from "./components/ManageRole/AddRole/AddRole";
 import { MaAcc } from "./components/ManageAccount/MaAcc";
+import { AddAct } from "./components/ManageAccount/AddAccount/AddAct";
+import { UpdateAct } from "./components/ManageAccount/UpdateAccount/UpdateAct";
+import { UserLog } from "./components/UserLog/UserLog";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -76,6 +79,11 @@ root.render(
 
         {/* Manage Account */}
         <Route path="/manage-account" element={<MaAcc />} />
+        <Route path="/add-account" element={<AddAct />} />
+        <Route path="/update-maAct" element={<UpdateAct />} />
+
+        {/* User Log */}
+        <Route path="/user-log" element={<UserLog />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

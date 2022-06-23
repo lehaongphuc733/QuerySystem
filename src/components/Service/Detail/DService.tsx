@@ -6,8 +6,10 @@ import {
   Search,
   Edit,
   Replay,
+  DateRange,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
+import { DatePick } from "../../DatePick/DatePick";
 
 const Container = styled.div`
   display: flex;
@@ -141,6 +143,24 @@ const Block2 = styled.div`
   height: 72px;
   left: 575px;
   top: 0px;
+`;
+const FormDate = styled.div`
+  display: flex;
+  gap: 5px;
+  height: 42px;
+  align-items: center;
+  input {
+    height: 20px;
+    width: 96.5px;
+    background: #ffffff;
+    border: 1.5px solid #e4e4e6 !important;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
 `;
 const P1 = styled.p`
   font-weight: 500;
@@ -423,22 +443,25 @@ export const DService = () => {
           <Block2>
             <P1>Chọn thời gian</P1>
 
-            <FormSelect className="dv-form-sl">
-              <Select className="dv-select">
-                <Option className="dv-option">Tất cả</Option>
-                <Option className="dv-option">Kết nối</Option>
-                <Option className="dv-option">Mất kết nối</Option>
-              </Select>
-              <ArrowDropDown
+            <FormDate>
+              <DatePick></DatePick>
+              <DateRange
                 style={{
-                  color: "orange",
+                  color: "#ff7506",
                   position: "absolute",
-                  left: "60px",
-                  top: "5px",
+                  left: "85px",
                 }}
-                className="db-icon-sdDrop"
               />
-            </FormSelect>
+              <ArrowRight style={{ position: "absolute", left: "139px" }} />
+              <DatePick></DatePick>
+              <DateRange
+                style={{
+                  color: "#ff7506",
+                  position: "absolute",
+                  left: "215px",
+                }}
+              />
+            </FormDate>
           </Block2>
           <Block3>
             <P1>Từ khóa</P1>

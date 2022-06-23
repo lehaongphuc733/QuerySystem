@@ -40,7 +40,7 @@ const Table = styled.table`
   overflow: hidden;
   top: -100px;
   left: -60px;
-  width: 1300px;
+  width: 1350px;
   height: 630px;
   border-collapse: collapse;
   border-width: 1px;
@@ -131,6 +131,32 @@ const Block1 = styled.div`
   left: 224px;
   top: 156px;
 `;
+
+const Block3 = styled.div`
+  position: absolute;
+  width: 300px;
+  height: 72px;
+  left: 1054px;
+  top: 96px;
+`;
+
+const P = styled.p`
+  font-weight: 500;
+`;
+
+const Input = styled.input`
+  width: 250px;
+  font-size: 18px;
+  border: 0.2px solid #e4e4e6;
+  border-radius: 10px;
+  padding: 12px;
+
+  /* Xoa border */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+`;
+
 const FormDate = styled.div`
   display: flex;
   gap: 5px;
@@ -149,12 +175,6 @@ const FormDate = styled.div`
     outline: none;
   }
 `;
-
-const FormSelect = styled.div`
-  width: 140px;
-`;
-
-const Option = styled.option``;
 
 const TabNext = styled.div`
   margin: auto;
@@ -205,7 +225,7 @@ const Nlab1 = styled.div`
   background-color: #ff7506;
 `;
 
-export const ReportStatiscal = () => {
+export const UserLogDT = () => {
   return (
     <Container>
       <Wrapper>
@@ -222,155 +242,90 @@ export const ReportStatiscal = () => {
             />
           </FormDate>
         </Block1>
+        <Block3>
+          <P>Từ khóa</P>
+          <Input type="text" placeholder="Nhập từ khóa"></Input>
+          <Search
+            style={{
+              color: "orange",
+              position: "absolute",
+              left: "240px",
+              top: "60px",
+            }}
+          />
+        </Block3>
       </Wrapper>
       <WrapperSt>
         <Statiscals>
           <Table className="dv-table">
             <Tr>
-              <Th>STT</Th>
-              <Th>Tên dịch vụ</Th>
-              <Th>Thời gian cấp</Th>
-              <Th>Tình trạng</Th>
-              <Th>Nguồn cấp</Th>
+              <Th>Tên đăng nhập</Th>
+              <Th>Thời gian tác động</Th>
+              <Th>IP thực hiện</Th>
+              <Th>Thao tác thực hiện</Th>
             </Tr>
             <Tr>
-              <Td>2010001</Td>
-              <Td>Khám tim mạch</Td>
-              <Td>07:20 - 07/10/2021</Td>
-              <Td>
-                <RowIcon>
-                  <IconBlue></IconBlue>
-                  <RowLabel>Đang chờ</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>Kiosk</Td>
+              <Td>tuyetnguyen@12</Td>
+              <Td>01/12/2021 15:12:17</Td>
+              <Td>192.168.3.1</Td>
+              <Td>Cập nhật thông tin dịch vụ DV_01</Td>
             </Tr>
             <Tr>
-              <Td>2010002</Td>
-              <Td>Răng hàm mặt</Td>
-              <Td>07:20 - 07/10/2021</Td>
-              <Td>
-                <RowIcon>
-                  <IconGray></IconGray>
-                  <RowLabel>Đã sử dụng</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>Hệ thống</Td>
+              <Td>tuyetnguyen@12</Td>
+              <Td>01/12/2021 15:12:17</Td>
+              <Td>192.168.3.1</Td>
+              <Td>Cập nhật thông tin dịch vụ DV_01</Td>
             </Tr>
             <Tr>
-              <Td>2010003</Td>
-              <Td>Khám sản - Phụ khoa</Td>
-              <Td>07:20 - 07/10/2021</Td>
-              <Td>
-                <RowIcon>
-                  <IconRed></IconRed>
-                  <RowLabel>Bỏ qua</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>Kiosk</Td>
+              <Td>tuyetnguyen@12</Td>
+              <Td>01/12/2021 15:12:17</Td>
+              <Td>192.168.3.1</Td>
+              <Td>Cập nhật thông tin dịch vụ DV_01</Td>
             </Tr>
             <Tr>
-              <Td>2010004</Td>
-              <Td>Răng hàm mặt</Td>
-              <Td>07:20 - 07/10/2021</Td>
-              <Td>
-                <RowIcon>
-                  <IconBlue></IconBlue>
-                  <RowLabel>Đang chờ</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>Hệ thống</Td>
+              <Td>tuyetnguyen@12</Td>
+              <Td>01/12/2021 15:12:17</Td>
+              <Td>192.168.3.1</Td>
+              <Td>Cập nhật thông tin dịch vụ DV_01</Td>
             </Tr>
             <Tr>
-              <Td>2010005</Td>
-              <Td>Tai mũi họng</Td>
-              <Td>07:20 - 07/10/2021</Td>
-              <Td>
-                <RowIcon>
-                  <IconBlue></IconBlue>
-                  <RowLabel>Đang chờ</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>Kiosk</Td>
+              <Td>tuyetnguyen@12</Td>
+              <Td>01/12/2021 15:12:17</Td>
+              <Td>192.168.3.1</Td>
+              <Td>Cập nhật thông tin dịch vụ DV_01</Td>
             </Tr>
             <Tr>
-              <Td>2010006</Td>
-              <Td>Khám tổng quát</Td>
-              <Td>07:20 - 07/10/2021</Td>
-              <Td>
-                <RowIcon>
-                  <IconRed></IconRed>
-                  <RowLabel>Bỏ qua</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>Hệ thống</Td>
+              <Td>tuyetnguyen@12</Td>
+              <Td>01/12/2021 15:12:17</Td>
+              <Td>192.168.3.1</Td>
+              <Td>Cập nhật thông tin dịch vụ DV_01</Td>
             </Tr>
             <Tr>
-              <Td>2010007</Td>
-              <Td>Khám hô hấp</Td>
-              <Td>07:20 - 07/10/2021</Td>
-              <Td>
-                <RowIcon>
-                  <IconBlue></IconBlue>
-                  <RowLabel>Đang chờ</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>Kiosk</Td>
+              <Td>tuyetnguyen@12</Td>
+              <Td>01/12/2021 15:12:17</Td>
+              <Td>192.168.3.1</Td>
+              <Td>Cập nhật thông tin dịch vụ DV_01</Td>
             </Tr>
             <Tr>
-              <Td>2010008</Td>
-              <Td>Khám hô hấp</Td>
-              <Td>07:20 - 07/10/2021</Td>
-              <Td>
-                <RowIcon>
-                  <IconGray></IconGray>
-                  <RowLabel>Đã sử dụng</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>Kiosk</Td>
+              <Td>tuyetnguyen@12</Td>
+              <Td>01/12/2021 15:12:17</Td>
+              <Td>192.168.3.1</Td>
+              <Td>Cập nhật thông tin dịch vụ DV_01</Td>
             </Tr>
             <Tr>
-              <Td>2010009</Td>
-              <Td>Tai mũi họng</Td>
-              <Td>07:20 - 07/10/2021</Td>
-              <Td>
-                <RowIcon>
-                  <IconRed></IconRed>
-                  <RowLabel>Bỏ qua</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>Hệ thống</Td>
+              <Td>tuyetnguyen@12</Td>
+              <Td>01/12/2021 15:12:17</Td>
+              <Td>192.168.3.1</Td>
+              <Td>Cập nhật thông tin dịch vụ DV_01</Td>
             </Tr>
             <Tr>
-              <Td>2010010</Td>
-              <Td>Khám sản - Phụ khoa</Td>
-              <Td>07:20 - 07/10/2021</Td>
-              <Td>
-                <RowIcon>
-                  <IconBlue></IconBlue>
-                  <RowLabel>Đang chờ</RowLabel>
-                </RowIcon>
-              </Td>
-              <Td>Hệ thống</Td>
+              <Td>tuyetnguyen@12</Td>
+              <Td>01/12/2021 15:12:17</Td>
+              <Td>192.168.3.1</Td>
+              <Td>Cập nhật thông tin dịch vụ DV_01</Td>
             </Tr>
           </Table>
         </Statiscals>
-        <FormAdd>
-          <Link to={"#Download"} className="db-fAdd">
-            <ButtonAdd>
-              <Add
-                style={{
-                  borderRadius: "25%",
-                  backgroundColor: "#ff7506",
-                  color: "#fff2e7",
-                  marginLeft: "24px",
-                  marginTop: "14px",
-                }}
-              />
-              <LabelAdd>Tải về</LabelAdd>
-            </ButtonAdd>
-          </Link>
-        </FormAdd>
       </WrapperSt>
       <TabNext className="dv-tag">
         <Pre className="dv-tag-con">

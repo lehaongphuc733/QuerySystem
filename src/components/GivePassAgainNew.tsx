@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 const BlockLeft = styled.div`
-  height: 59.5rem;
+  height: 55rem;
   background-color: #f6f6f6;
   display: flex;
   align-items: center;
@@ -44,6 +44,9 @@ const Input = styled.input`
   border: 2px solid #dcdcde;
   border-radius: 12px;
   padding: 12px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
 `;
 
 const MainButton = styled.div`
@@ -73,7 +76,7 @@ const Button = styled.button`
 const BlockRight = styled.div`
   background-color: white;
   flex: 6;
-  height: 60rem;
+  height: 55rem;
 `;
 
 const ImageRight = styled.img`
@@ -120,7 +123,7 @@ export const GivePassAgainNew = () => {
                 id="show1"
                 style={{
                   position: "absolute",
-                  top: "530px",
+                  top: "490px",
                   left: "500px",
                   cursor: "pointer",
                 }}
@@ -132,7 +135,7 @@ export const GivePassAgainNew = () => {
                 style={{
                   display: "none",
                   position: "absolute",
-                  top: "530px",
+                  top: "490px",
                   left: "500px",
                   cursor: "pointer",
                 }}
@@ -145,7 +148,7 @@ export const GivePassAgainNew = () => {
                 id="show2"
                 style={{
                   position: "absolute",
-                  top: "620px",
+                  top: "580px",
                   left: "500px",
                   cursor: "pointer",
                 }}
@@ -157,7 +160,7 @@ export const GivePassAgainNew = () => {
                 style={{
                   display: "none",
                   position: "absolute",
-                  top: "620px",
+                  top: "580px",
                   left: "500px",
                   cursor: "pointer",
                 }}

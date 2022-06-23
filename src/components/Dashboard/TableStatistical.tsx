@@ -125,6 +125,11 @@ const Select = styled.select`
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  cursor: pointer;
 `;
 
 const Option = styled.option``;

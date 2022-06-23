@@ -54,8 +54,9 @@ const BRight = styled.div`
   margin-left: 20px;
 `;
 const NameR = styled.p``;
-const InputR = styled.input`
+const InputR = styled.textarea`
   font-size: 14px;
+  padding: 12px;
   padding: 5px;
   pointer-events: none;
   width: 555px;
@@ -227,7 +228,7 @@ export const AService = () => {
         </BLeft>
         <BRight>
           <NameR>Mô tả: </NameR>
-          <InputR type="text" value="Mô tả dịch vụ"></InputR>
+          <InputR value="Mô tả dịch vụ"></InputR>
         </BRight>
       </Block2>
       <Block3>

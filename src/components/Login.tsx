@@ -16,7 +16,7 @@ const Container = styled.div`
 `;
 
 const BlockLeft = styled.div`
-  height: 59.5rem;
+  height: 55rem;
   background-color: #f6f6f6;
   display: flex;
   align-items: center;
@@ -52,16 +52,19 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  padding: 10px;
+  padding: 12px 20px;
   border-radius: 12px;
   width: 300px;
   border: 2px solid #6d6761;
   font-size: 18px;
-  border: none;
-`;
+  border: 0.2px solid #e4e4e6;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
 
-const ObVisibilityOff = styled.div`
-  display: flex;
+  & :focus {
+    border: 0.2px solid #e4e4e6;
+  }
 `;
 
 const PassContainer = styled.div`
@@ -125,7 +128,7 @@ const Links = styled.button`
 const BlockRight = styled.div`
   background-color: white;
   flex: 6;
-  height: 60rem;
+  height: 55rem;
 `;
 
 const ImageRight = styled.img`
@@ -157,7 +160,12 @@ export const Login = (props: User) => {
           <Image src={logoLogin} />
           <Form>
             <Label htmlFor="">Tên đăng nhập *</Label>
-            <Input placeholder="username" required value={props.name} />
+            <Input
+              placeholder="username"
+              required
+              value={props.name}
+              type="text"
+            />
             <Label htmlFor="">Mật khẩu *</Label>
             <PassContainer>
               <Input type={"password"} id="pw1" value={props.password} />
@@ -166,7 +174,7 @@ export const Login = (props: User) => {
                 id="show1"
                 style={{
                   position: "absolute",
-                  top: "500px",
+                  top: "488px",
                   left: "510px",
                   cursor: "pointer",
                 }}
@@ -178,7 +186,7 @@ export const Login = (props: User) => {
                 style={{
                   display: "none",
                   position: "absolute",
-                  top: "500px",
+                  top: "488px",
                   left: "510px",
                   cursor: "pointer",
                 }}

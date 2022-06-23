@@ -1,12 +1,16 @@
 import styled from "styled-components";
+import { DatePick } from "../DatePick/DatePick";
+// import DatePicker from "react-datepicker";
 import {
   ArrowDropDown,
   Search,
   Add,
   ArrowLeft,
   ArrowRight,
+  DateRange,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -37,8 +41,25 @@ const Block2 = styled.div`
   left: 520px;
   top: 156px;
 `;
+const FormDate = styled.div`
+  display: flex;
+  gap: 5px;
+  height: 42px;
+  align-items: center;
+  input {
+    height: 20px;
+    width: 125px;
+    background: #ffffff;
+    border: 1.5px solid #e4e4e6 !important;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+`;
 const Block3 = styled.div`
-  /* border: 0.2px solid #e4e4e6; */
   position: absolute;
   width: 300px;
   height: 72px;
@@ -52,7 +73,11 @@ const P = styled.p`
 
 const FormSelect = styled.div``;
 
-const Select = styled.select``;
+const Select = styled.select`
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+`;
 
 const Option = styled.option``;
 
@@ -62,21 +87,12 @@ const Input = styled.input`
   border: 0.2px solid #e4e4e6;
   border-radius: 10px;
   padding: 12px;
+
+  /* Xoa border */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
 `;
-
-// const Header = styled.div``;
-
-// const HBlock1 = styled.div``;
-// const Title = styled.p``;
-// const FormSelect = styled.div``;
-// const Select = styled.select``;
-// const Option = styled.option``;
-
-// const HBlock2 = styled.div``;
-// const HBlock3 = styled.div``;
-// const HBlock4 = styled.div``;
-// const Search = styled.div``;
-// const Input = styled.input``;
 
 const TableSt = styled.div`
   display: flex;
@@ -220,6 +236,7 @@ const Dot = styled.div``;
 const Next = styled.div``;
 
 export const StatiscalService = () => {
+  const [startDate, setStartDate] = useState(new Date());
   return (
     <Container>
       <Wrapper>
@@ -244,23 +261,18 @@ export const StatiscalService = () => {
         </Block1>
         <Block2>
           <P>Chọn thời gian</P>
-
-          <FormSelect className="dv-form-sl">
-            <Select className="dv-select">
-              <Option className="dv-option">Tất cả</Option>
-              <Option className="dv-option">Kết nối</Option>
-              <Option className="dv-option">Mất kết nối</Option>
-            </Select>
-            <ArrowDropDown
-              style={{
-                color: "orange",
-                position: "absolute",
-                left: "220px",
-                top: "5px",
-              }}
-              className="db-icon-sdDrop"
+          {/* <DateP type="date"></DateP> */}
+          <FormDate>
+            <DatePick></DatePick>
+            <DateRange
+              style={{ color: "#ff7506", position: "absolute", left: "115px" }}
             />
-          </FormSelect>
+            <ArrowRight style={{ position: "absolute", left: "139px" }} />
+            <DatePick></DatePick>
+            <DateRange
+              style={{ color: "#ff7506", position: "absolute", left: "265px" }}
+            />
+          </FormDate>
         </Block2>
         <Block3>
           <P>Từ khóa</P>
@@ -275,29 +287,7 @@ export const StatiscalService = () => {
           />
         </Block3>
       </Wrapper>
-      {/* <Header>
-        <HBlock1>
-          <Title>Trạng thái hoạt động</Title>
-          <FormSelect>
-            <Select>
-              <Option>Tất cả</Option>
-              <Option>Hoạt động</Option>
-              <Option>Ngưng hoạt động</Option>
-            </Select>
-          </FormSelect>
-        </HBlock1>
-        <HBlock2>
-          <Title>Chọn thời gian</Title>
-        </HBlock2>
-        <HBlock3>
-        </HBlock3>
-        <HBlock4>
-          <Title>Từ khóa</Title>
-          <Search>
-            <Input type="text" placeholder="Nhập từ khóa"></Input>
-          </Search>
-        </HBlock4>
-      </Header> */}
+
       <TableSt>
         <Statiscals>
           <Table className="dv-table">

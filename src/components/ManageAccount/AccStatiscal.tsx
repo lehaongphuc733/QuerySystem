@@ -388,7 +388,7 @@ export const AccStatiscal = () => {
           </Table>
         </Statiscals>
         <FormAdd>
-          <Link to={"/add-device"} className="db-fAdd">
+          <Link to={"/add-account"} className="db-fAdd">
             <ButtonAdd>
               <Add
                 style={{

@@ -5,8 +5,10 @@ import {
   Add,
   ArrowLeft,
   ArrowRight,
+  DateRange,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
+import { DatePick } from "../DatePick/DatePick";
 
 const Container = styled.div`
   display: flex;
@@ -150,6 +152,24 @@ const Block4 = styled.div`
   left: 675px;
   top: 156px;
 `;
+const FormDate = styled.div`
+  display: flex;
+  gap: 5px;
+  height: 42px;
+  align-items: center;
+  input {
+    height: 20px;
+    width: 125px;
+    background: #ffffff;
+    border: 1.5px solid #e4e4e6 !important;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+`;
 const Block5 = styled.div`
   /* border: 0.2px solid #e4e4e6; */
   position: absolute;
@@ -171,6 +191,10 @@ const FormSelect = styled.div`
 const Select = styled.select`
   font-size: 18px;
   width: 140px;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
 `;
 
 const Option = styled.option``;
@@ -181,6 +205,10 @@ const Input = styled.input`
   border: 0.2px solid #e4e4e6;
   border-radius: 10px;
   padding: 12px;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
 `;
 
 const TabNext = styled.div`
@@ -302,7 +330,17 @@ export const StatiscalNumber = () => {
         </Block3>
         <Block4>
           <P>Chọn thời gian</P>
-          <Input type="text"></Input>
+          <FormDate>
+            <DatePick></DatePick>
+            <DateRange
+              style={{ color: "#ff7506", position: "absolute", left: "115px" }}
+            />
+            <ArrowRight style={{ position: "absolute", left: "139px" }} />
+            <DatePick></DatePick>
+            <DateRange
+              style={{ color: "#ff7506", position: "absolute", left: "265px" }}
+            />
+          </FormDate>
         </Block4>
         <Block5>
           <P>Từ khóa</P>
