@@ -11,6 +11,7 @@ const Container = styled.div`
   left: 220px;
   width: 1200px;
   height: 650px;
+  /* opacity: 0.5; */
 `;
 
 const TitleIf = styled.p`
@@ -26,76 +27,6 @@ const P = styled.p`
   font-weight: 400;
   text-align: center;
   margin-top: -20px;
-`;
-
-const Block1 = styled.div`
-  float: left;
-  width: 500px;
-`;
-const Break1 = styled.div`
-  margin-top: 20px;
-  margin-left: 20px;
-`;
-const LCon = styled.label`
-  font-size: 20px;
-  font-weight: 500;
-`;
-
-const IconBlue = styled.div`
-  background-color: blue;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-`;
-
-const Con = styled.label`
-  font-size: 18px;
-  /* position: relative;
-  left: 50px; */
-  margin-left: 30px;
-  color: #8e8d97;
-`;
-
-const Block2 = styled.div`
-  width: 500px;
-  float: right;
-`;
-const Break2 = styled.div`
-  margin-top: 20px;
-`;
-
-const Block3 = styled.div`
-  width: 1000px;
-  margin-top: 20px;
-  margin-left: 20px;
-  float: left;
-  line-height: 20px;
-`;
-
-const FormUpdate = styled.div`
-  margin: auto;
-  position: absolute;
-  border-radius: 12px;
-  top: 0px;
-  left: 1140px;
-
-  & :hover {
-    cursor: pointer;
-  }
-`;
-const ButtonUpdate = styled.button`
-  background-color: #fff2e7;
-  width: 80px;
-  border: none;
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-`;
-const LabelUpdate = styled.label`
-  color: orange;
-  font-size: 15.5px;
-  text-align: center;
-  margin-left: 4px;
 `;
 
 const FormSelect = styled.div`
@@ -128,26 +59,6 @@ const ButtonCancel = styled.div`
     cursor: pointer;
   }
 `;
-const ButtonAdd = styled.div`
-  margin-left: 30px;
-  & :hover {
-    cursor: pointer;
-  }
-`;
-
-const BAdd = styled.button`
-  background-color: #ff9138;
-  border: none;
-  color: #fffcfa;
-  border-radius: 12px;
-  width: 150px;
-  height: 50px;
-
-  & :hover {
-    cursor: pointer;
-  }
-`;
-
 const BCancel = styled.button`
   border-radius: 12px;
   border: 0.1px solid #ff9138;
@@ -191,11 +102,6 @@ export const ANumber = () => {
           </Link>
         </ButtonCancel>
         <NewNumber title="In số" />
-        {/* <ButtonAdd>
-          <Link to={"/new-number"}>
-            <BAdd>In số</BAdd>
-          </Link>
-        </ButtonAdd> */}
       </ButtonForm>
     </Container>
   );

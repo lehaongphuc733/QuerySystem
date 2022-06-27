@@ -350,7 +350,7 @@ export const StatiscalNumber = () => {
               color: "orange",
               position: "absolute",
               left: "240px",
-              top: "60px",
+              top: "67.5px",
             }}
           />
         </Block5>
